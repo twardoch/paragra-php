@@ -1,0 +1,80 @@
+{
+  "name": "vexy/paragra-php",
+  "description": "Provider-agnostic PHP toolkit for orchestrating multi-provider RAG and LLM pipelines",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "rag",
+    "llm",
+    "multi-provider",
+    "php",
+    "ragie",
+    "gemini",
+    "askyoda"
+  ],
+  "homepage": "https://ask.vexy.art",
+  "support": {
+    "issues": "https://github.com/twardoch/rag-projects/issues",
+    "source": "https://github.com/twardoch/rag-projects"
+  },
+  "require": {
+    "php": "^8.2",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "google-gemini-php/client": "^2.7",
+    "google/cloud-ai-platform": "^0.12",
+    "guzzlehttp/guzzle": "^7.10",
+    "neuron-core/neuron-ai": "^2.8",
+    "openai-php/client": "^0.17",
+    "ragie/ragie-php": "dev-main",
+    "symfony/process": "^7.1"
+  },
+  "require-dev": {
+    "dg/bypass-finals": "^1.5",
+    "friendsofphp/php-cs-fixer": "^3.88",
+    "phpstan/phpstan": "^1.12",
+    "phpunit/phpunit": "^11.5",
+    "vimeo/psalm": "^6.13"
+  },
+  "autoload": {
+    "psr-4": {
+      "ParaGra\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ParaGra\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "lint": "@php vendor/bin/php-cs-fixer fix --diff --dry-run --allow-risky=yes",
+    "stan": "@php vendor/bin/phpstan analyse --configuration=phpstan.neon.dist",
+    "psalm": "@php vendor/bin/psalm --config=psalm.xml",
+    "test": "@php vendor/bin/phpunit --configuration=phpunit.xml.dist",
+    "qa": [
+      "@lint",
+      "@stan",
+      "@psalm",
+      "@test"
+    ]
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../ragie-php",
+      "options": {
+        "symlink": false
+      }
+    }
+  ],
+  "extra": {
+    "paragra": {
+      "this_file": "paragra-php/composer.json"
+    }
+  }
+}

@@ -1,0 +1,1891 @@
+{
+    "generated_at": "2025-11-16T02:05:15+00:00",
+    "source": "/Users/adam/Developer/vcs/github.vexyart/vexy-co-model-catalog",
+    "providers": [
+        {
+            "slug": "aihorde",
+            "display_name": "Aihorde",
+            "description": "",
+            "api_key_env": "AIHORDE_KEY",
+            "base_url": "https://oai.aihorde.net/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "anthropic",
+            "display_name": "Anthropic",
+            "description": "",
+            "api_key_env": "ANTHROPIC_API_KEY",
+            "base_url": "https://api.anthropic.com/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "arliai",
+            "display_name": "Arliai",
+            "description": "",
+            "api_key_env": "ARLIAI_TEXT_API_KEY",
+            "base_url": "https://api.arliai.com/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "askyoda",
+            "display_name": "EdenAI AskYoda",
+            "description": "Full retrieval + answer pipeline via EdenAI AskYoda.",
+            "api_key_env": "EDENAI_API_KEY",
+            "base_url": "https://api.edenai.run/v2",
+            "capabilities": {
+                "llm_chat": true,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": "askyoda",
+            "default_models": {
+                "generation": "askyoda:gemini-2.5-flash-lite"
+            },
+            "default_solution": {
+                "type": "askyoda",
+                "defaults": {
+                    "k": 10,
+                    "min_score": 0.3
+                }
+            },
+            "metadata": {
+                "tier": "hosted",
+                "latency": "medium",
+                "latency_tier": "hosted",
+                "insights": {
+                    "eden-askyoda": {
+                        "slug": "eden-askyoda",
+                        "name": "Eden AI AskYoda Hosted Workflow",
+                        "category": "hosted_rag",
+                        "reset_window": "per_minute_plan_tiers",
+                        "commercial_use": "Starter tier is free for testing; Personal/Professional plans unlock higher renewable RPM and production support.",
+                        "notes": "AskYoda runs on Eden AI's hosted workflow engine, routes to multiple LLMs, exposes fallback_providers, and surfaces latency/response-time telemetry in the monitoring dashboard so operators can keep responses in the sub-3-second tier.",
+                        "modalities": [
+                            "rag",
+                            "llm_router",
+                            "workflow"
+                        ],
+                        "recommended_roles": [
+                            "hosted_fallback_rag",
+                            "edenai_pool",
+                            "latency_guardrail"
+                        ],
+                        "free_tier": {
+                            "starter_requests_per_minute": 60,
+                            "personal_requests_per_minute": 300,
+                            "professional_requests_per_minute": 1000,
+                            "http_429_response": "Returns HTTP 429 when tier limit exceeded"
+                        },
+                        "sources": [
+                            {
+                                "path": "reference/research-rag/ragres-14.md",
+                                "sha256": "73dff8f43d637610bb2b1c4a94825771c6d8e4422809f4ea554962b17913ba26",
+                                "start_line": 10,
+                                "end_line": 16
+                            },
+                            {
+                                "path": "reference/research-rag/ragres-14.md",
+                                "sha256": "73dff8f43d637610bb2b1c4a94825771c6d8e4422809f4ea554962b17913ba26",
+                                "start_line": 18,
+                                "end_line": 19
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "slug": "atlascloud",
+            "display_name": "Atlascloud",
+            "description": "",
+            "api_key_env": "ATLASCLOUD_API_KEY",
+            "base_url": null,
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "avian",
+            "display_name": "Avian",
+            "description": "",
+            "api_key_env": "AVIAN_API_KEY",
+            "base_url": "https://api.avian.io/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "baseten",
+            "display_name": "Baseten",
+            "description": "",
+            "api_key_env": "BASETEN_API_KEY",
+            "base_url": "https://inference.baseten.co/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "bedrock-kb",
+            "display_name": "AWS Bedrock Knowledge Bases",
+            "description": "Managed retrieval layer that pairs OpenSearch Serverless with AWS-hosted LLMs.",
+            "api_key_env": null,
+            "base_url": null,
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": true,
+                "moderation": false,
+                "image_generation": false,
+                "byok": true
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": {
+                "tier": "managed",
+                "latency": "dependent",
+                "insights": {
+                    "aws-bedrock-knowledge-bases": {
+                        "slug": "aws-bedrock-knowledge-bases",
+                        "name": "AWS Bedrock Knowledge Bases",
+                        "category": "managed_rag",
+                        "reset_window": "monthly",
+                        "commercial_use": "AWS enterprise workloads with IAM + audit trails; billed monthly alongside OpenSearch/Neptune usage.",
+                        "notes": "Bedrock Knowledge Bases couple OpenSearch Serverless with optional Neptune GraphRAG pipelines so enterprises can load content, pick Anthropic/Meta/Amazon models, and ship retrieval flows without bespoke infrastructure.",
+                        "modalities": [
+                            "rag",
+                            "vector_store",
+                            "graph"
+                        ],
+                        "recommended_roles": [
+                            "managed_graph_rag",
+                            "enterprise_handoff"
+                        ],
+                        "free_tier": {
+                            "monthly_cost_usd": 500,
+                            "setup_days": 5,
+                            "includes_vector_db": false
+                        },
+                        "sources": [
+                            {
+                                "path": "reference/research-rag/ragres-05.md",
+                                "sha256": "b359d75121ad8ea1562fc2b49282fe480f80674c89e80ec38b946de503de7489",
+                                "start_line": 62,
+                                "end_line": 70
+                            },
+                            {
+                                "path": "reference/research-rag/ragres-05.md",
+                                "sha256": "b359d75121ad8ea1562fc2b49282fe480f80674c89e80ec38b946de503de7489",
+                                "start_line": 96,
+                                "end_line": 132
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "slug": "cerebras",
+            "display_name": "Cerebras",
+            "description": "Fast, low-cost Llama-3.3 hosting and generous free tier.",
+            "api_key_env": "CEREBRAS_API_KEY",
+            "base_url": "https://api.cerebras.ai/v1",
+            "capabilities": {
+                "llm_chat": true,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": "ragie",
+            "default_models": {
+                "generation": "llama-3.3-70b",
+                "fast_generation": "llama-3.1-8b"
+            },
+            "default_solution": {
+                "type": "ragie",
+                "ragie_partition": "default",
+                "metadata": {
+                    "tier": "free"
+                }
+            },
+            "metadata": {
+                "tier": "free",
+                "latency": "medium"
+            }
+        },
+        {
+            "slug": "chutes",
+            "display_name": "Chutes",
+            "description": "",
+            "api_key_env": "CHUTES_API_KEY",
+            "base_url": "https://llm.chutes.ai/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "cloudflare",
+            "display_name": "Cloudflare Workers AI",
+            "description": "Edge-hosted inference with EmbeddingGemma and 10k neuron daily renewals.",
+            "api_key_env": "CLOUDFLARE_API_TOKEN",
+            "base_url": "https://api.cloudflare.com/client/v4",
+            "capabilities": {
+                "llm_chat": true,
+                "embeddings": true,
+                "vector_store": true,
+                "moderation": false,
+                "image_generation": false,
+                "byok": true
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": "workers-ai",
+            "default_models": {
+                "generation": "@cf/meta/llama-3.1-8b-instruct",
+                "embedding": "@cf/google/gemma-embedding-002"
+            },
+            "default_solution": null,
+            "metadata": {
+                "tier": "free",
+                "latency": "low",
+                "insights": {
+                    "cloudflare-workers-ai": {
+                        "slug": "cloudflare-workers-ai",
+                        "name": "Cloudflare Workers AI \u2013 EmbeddingGemma",
+                        "category": "edge_ai",
+                        "reset_window": "daily",
+                        "commercial_use": "Covered by Workers AI free plan; commercial usage allowed within neuron allocation.",
+                        "notes": "Workers AI hosts EmbeddingGemma-300m plus BGE family models with 10,000 free neurons per day (~5\u201310M tokens). Paid overages cost $0.011 per 1,000 neurons and run at Cloudflare's global edge.",
+                        "modalities": [
+                            "embedding",
+                            "llm",
+                            "vector"
+                        ],
+                        "recommended_roles": [
+                            "edge_embeddings",
+                            "latency_sensitive_rag"
+                        ],
+                        "free_tier": {
+                            "neurons_per_day": 10000,
+                            "approx_tokens_per_day": 5000000
+                        },
+                        "sources": [
+                            {
+                                "path": "reference/research-embedding/emb-cla.md",
+                                "sha256": "be957503605ddc97af43a28adde1a95240ef549297d783e2240049239a4a59bf",
+                                "start_line": 205,
+                                "end_line": 217
+                            },
+                            {
+                                "path": "reference/research-ai-api/02-gem.md",
+                                "sha256": "77c5d13b3146293f609cb47811f22848b814e83d2d8ad83e46e5831a1831d4e4",
+                                "start_line": 22,
+                                "end_line": 24
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "slug": "deepinfra",
+            "display_name": "Deepinfra",
+            "description": "",
+            "api_key_env": "DEEPINFRA_API_KEY",
+            "base_url": "https://api.deepinfra.com/v1/openai",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "deepseek",
+            "display_name": "Deepseek",
+            "description": "",
+            "api_key_env": "DEEPSEEK_API_KEY",
+            "base_url": "https://api.deepseek.com/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "dify",
+            "display_name": "Dify Orchestrator",
+            "description": "Self-hostable RAG + automation builder with visual flows.",
+            "api_key_env": null,
+            "base_url": null,
+            "capabilities": {
+                "llm_chat": true,
+                "embeddings": true,
+                "vector_store": true,
+                "moderation": false,
+                "image_generation": false,
+                "byok": true
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": {
+                "type": "dify"
+            },
+            "metadata": {
+                "tier": "self_hosted",
+                "latency": "dependent",
+                "insights": {
+                    "dify-platform": {
+                        "slug": "dify-platform",
+                        "name": "Dify Open-Source Orchestrator",
+                        "category": "rag_platform",
+                        "reset_window": "n/a",
+                        "commercial_use": "MIT-licensed self-host; infra costs ($50-200/month) govern production deployments.",
+                        "notes": "Dify ships a Docker-deployable UI with 90k+ GitHub stars, drag-and-drop pipelines, and connectors for 100+ LLM providers. Recommended for teams needing a no-code/low-code RAG builder they can self-host.",
+                        "modalities": [
+                            "workflow_builder",
+                            "rag"
+                        ],
+                        "recommended_roles": [
+                            "hosted_rag_builder",
+                            "visual_pipeline"
+                        ],
+                        "free_tier": {
+                            "notes": "No vendor-enforced API quota; cost is the underlying Docker/Railway/Render infrastructure."
+                        },
+                        "sources": [
+                            {
+                                "path": "reference/research-rag/ragres-07.md",
+                                "sha256": "7a3dfd6b76169a6ac833c2005bbd818cd8c29b9739f78a1a815ecb0239b297cd",
+                                "start_line": 70,
+                                "end_line": 79
+                            },
+                            {
+                                "path": "reference/research-rag/ragres-02.md",
+                                "sha256": "fca0ce92dab93bc939ce7301a281a03a1fa023152c50182ccbeea31dd331b105",
+                                "start_line": 70,
+                                "end_line": 116
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "slug": "enfer",
+            "display_name": "Enfer",
+            "description": "",
+            "api_key_env": "ENFER_API_KEY",
+            "base_url": "https://api.enfer.ai/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "featherless",
+            "display_name": "Featherless",
+            "description": "",
+            "api_key_env": "FEATHERLESS_API_KEY",
+            "base_url": "https://api.featherless.ai/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "fireworks",
+            "display_name": "Fireworks",
+            "description": "",
+            "api_key_env": "FIREWORKS_API_KEY",
+            "base_url": "https://api.fireworks.ai/inference/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "friendli",
+            "display_name": "Friendli",
+            "description": "",
+            "api_key_env": "FRIENDLI_TOKEN",
+            "base_url": "https://api.friendli.ai/serverless/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "gemini",
+            "display_name": "Google Gemini",
+            "description": "Gemini API with File Search and text-embedding-004.",
+            "api_key_env": "GOOGLE_API_KEY",
+            "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+            "capabilities": {
+                "llm_chat": true,
+                "embeddings": true,
+                "vector_store": true,
+                "moderation": false,
+                "image_generation": true,
+                "byok": true
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": {
+                "text-embedding-004": 3072
+            },
+            "preferred_vector_store": "gemini-file-search",
+            "default_models": {
+                "generation": "gemini-2.0-flash-exp",
+                "embedding": "text-embedding-004"
+            },
+            "default_solution": {
+                "type": "gemini-file-search",
+                "vector_store": {
+                    "corpus": "default"
+                }
+            },
+            "metadata": {
+                "tier": "paid",
+                "latency": "medium",
+                "insights": {
+                    "google-gemini-flash": {
+                        "slug": "google-gemini-flash",
+                        "name": "Google AI Studio \u2013 Gemini 2.5 Flash",
+                        "category": "llm",
+                        "reset_window": "daily_midnight_pt",
+                        "commercial_use": "Permits production prototyping without a credit card; governed by Gemini API ToS.",
+                        "notes": "Gemini 2.5 Flash leads the renewable free tier list with 250 RPD, 10 RPM, and a multimodal 2M-token context. Gemini 2.5 Pro and Gemma models stay available under the same API key for heavier jobs.",
+                        "modalities": [
+                            "text",
+                            "vision",
+                            "audio"
+                        ],
+                        "recommended_roles": [
+                            "frontline_free_llm",
+                            "fallback_multimodal"
+                        ],
+                        "free_tier": {
+                            "requests_per_day": 250,
+                            "requests_per_minute": 10,
+                            "tokens_per_minute": 250000,
+                            "context_tokens": 2000000
+                        },
+                        "sources": [
+                            {
+                                "path": "reference/research-ai-api/01-gem.md",
+                                "sha256": "861c4f4e4f5fef6d088fa1a1987b0084c3e6f0b1aa28e7a6d0d03e87a7559832",
+                                "start_line": 110,
+                                "end_line": 125
+                            },
+                            {
+                                "path": "reference/research-ai-api/01-cla.md",
+                                "sha256": "cb1512796cd191d08bd422eeb56dd112139c6f691eefd988d57f09d3cd675a03",
+                                "start_line": 13,
+                                "end_line": 16
+                            }
+                        ]
+                    },
+                    "google-gemini-embedding": {
+                        "slug": "google-gemini-embedding",
+                        "name": "Google Gemini Embedding API (gemini-embedding-001)",
+                        "category": "embedding",
+                        "reset_window": "daily",
+                        "commercial_use": "Allowed under Gemini API policies with renewable limits for production workloads.",
+                        "notes": "Google advertises completely free embedding throughput; practical rate limits are 1,000 RPD and 100 RPM, easily covering 20k+ daily embeddings.",
+                        "modalities": [
+                            "embedding"
+                        ],
+                        "recommended_roles": [
+                            "frontline_embeddings",
+                            "zero_cost_embeddings"
+                        ],
+                        "free_tier": {
+                            "requests_per_day": 1000,
+                            "requests_per_minute": 100,
+                            "tokens_per_minute": 30000
+                        },
+                        "sources": [
+                            {
+                                "path": "reference/research-ai-api/02-gpt.md",
+                                "sha256": "590f026b4ff8e485756a5f03d5df1535369a1c9860f72f8ce13f7280921a71fa",
+                                "start_line": 158,
+                                "end_line": 165
+                            },
+                            {
+                                "path": "reference/research-embedding/emb-cla.md",
+                                "sha256": "be957503605ddc97af43a28adde1a95240ef549297d783e2240049239a4a59bf",
+                                "start_line": 205,
+                                "end_line": 227
+                            }
+                        ]
+                    },
+                    "google-gemini-file-search": {
+                        "slug": "google-gemini-file-search",
+                        "name": "Google Gemini API \u2013 File Search Tool",
+                        "category": "rag_tool",
+                        "reset_window": "project_storage_limits",
+                        "commercial_use": "Available to Gemini API projects without additional contracts; follows Gemini API ToS.",
+                        "notes": "File Search is a fully managed RAG pipeline that handles chunking, Gemini Embedding generation, retrieval, and inline citations. Storage plus query-time embeddings are free; only the initial indexing embeddings incur costs, and stores keep latency low when under ~20 GB.",
+                        "modalities": [
+                            "rag",
+                            "vector_store",
+                            "tool"
+                        ],
+                        "recommended_roles": [
+                            "managed_file_rag",
+                            "gemini_pool_seed",
+                            "citation_first"
+                        ],
+                        "free_tier": {
+                            "max_file_mb": 100,
+                            "store_quota_gb_free": 1,
+                            "store_quota_gb_tier1": 10,
+                            "store_quota_gb_tier2": 100,
+                            "store_quota_gb_tier3": 1000,
+                            "embedding_index_cost_per_million_tokens_usd": "$0.15"
+                        },
+                        "sources": [
+                            {
+                                "path": "reference/research-rag/ragres-13.md",
+                                "sha256": "bc9b8d398315e7aecff0cef10d6a39498848d03d2473d394f52c34293ed20005",
+                                "start_line": 9,
+                                "end_line": 16
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "slug": "groq",
+            "display_name": "Groq",
+            "description": "Ultra-low latency OpenAI-compatible endpoint for Llama/Mixtral.",
+            "api_key_env": "GROQ_API_KEY",
+            "base_url": "https://api.groq.com/openai/v1",
+            "capabilities": {
+                "llm_chat": true,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": true
+            },
+            "model_count": 21,
+            "models": [
+                "allam-2-7b",
+                "deepseek-r1-distill-llama-70b",
+                "gemma2-9b-it",
+                "groq/compound",
+                "groq/compound-mini",
+                "llama-3.1-8b-instant",
+                "llama-3.3-70b-versatile",
+                "meta-llama/llama-4-maverick-17b-128e-instruct",
+                "meta-llama/llama-4-scout-17b-16e-instruct",
+                "meta-llama/llama-guard-4-12b",
+                "meta-llama/llama-prompt-guard-2-22m",
+                "meta-llama/llama-prompt-guard-2-86m",
+                "moonshotai/kimi-k2-instruct",
+                "moonshotai/kimi-k2-instruct-0905",
+                "openai/gpt-oss-20b",
+                "openai/gpt-oss-120b",
+                "playai-tts",
+                "playai-tts-arabic",
+                "qwen/qwen3-32b",
+                "whisper-large-v3",
+                "whisper-large-v3-turbo"
+            ],
+            "embedding_dimensions": [],
+            "preferred_vector_store": "ragie",
+            "default_models": {
+                "generation": "llama-3.1-70b-versatile",
+                "fast_generation": "llama-3.1-8b-instant"
+            },
+            "default_solution": null,
+            "metadata": {
+                "tier": "free",
+                "latency": "low",
+                "insights": {
+                    "groq-llama": {
+                        "slug": "groq-llama",
+                        "name": "Groq Cloud \u2013 Llama family",
+                        "category": "llm",
+                        "reset_window": "daily",
+                        "commercial_use": "Explicitly allowed for production once workloads fit inside free tiers; higher paid tiers available.",
+                        "notes": "Groq's LPU-backed inference prioritizes speed with 14,400 RPD for Llama 3.1 8B, 1,000 RPD for Llama 3.3 70B, and 2,000 RPD for Whisper v3 transcription, all resetting daily.",
+                        "modalities": [
+                            "text",
+                            "audio"
+                        ],
+                        "recommended_roles": [
+                            "latency_critical_llm",
+                            "fallback_llm"
+                        ],
+                        "free_tier": {
+                            "requests_per_minute": 40,
+                            "models": [
+                                {
+                                    "model": "llama-3.1-8b",
+                                    "requests_per_day": 14400,
+                                    "tokens_per_minute": 6000
+                                },
+                                {
+                                    "model": "llama-3.3-70b",
+                                    "requests_per_day": 1000,
+                                    "tokens_per_minute": 12000
+                                }
+                            ]
+                        },
+                        "sources": [
+                            {
+                                "path": "reference/research-ai-api/01-gem.md",
+                                "sha256": "861c4f4e4f5fef6d088fa1a1987b0084c3e6f0b1aa28e7a6d0d03e87a7559832",
+                                "start_line": 152,
+                                "end_line": 160
+                            },
+                            {
+                                "path": "reference/research-ai-api/01-cla.md",
+                                "sha256": "cb1512796cd191d08bd422eeb56dd112139c6f691eefd988d57f09d3cd675a03",
+                                "start_line": 15,
+                                "end_line": 19
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "slug": "huggingface",
+            "display_name": "Huggingface",
+            "description": "",
+            "api_key_env": "HUGGINGFACEHUB_API_TOKEN",
+            "base_url": "https://router.huggingface.co/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "hyperbolic",
+            "display_name": "Hyperbolic",
+            "description": "",
+            "api_key_env": "HYPERBOLIC_API_KEY",
+            "base_url": "https://api.hyperbolic.xyz/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "inference",
+            "display_name": "Inference",
+            "description": "",
+            "api_key_env": "INFERENCENET_API_KEY",
+            "base_url": "https://api.inference.net/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "infermatic",
+            "display_name": "Infermatic",
+            "description": "",
+            "api_key_env": "INFERMATIC_API_KEY",
+            "base_url": "https://api.totalgpt.ai/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "litellm",
+            "display_name": "Litellm",
+            "description": "",
+            "api_key_env": null,
+            "base_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "llm7",
+            "display_name": "Llm7",
+            "description": "",
+            "api_key_env": "LLM7_API_KEY",
+            "base_url": "https://api.llm7.io/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "lmstudio",
+            "display_name": "Lmstudio",
+            "description": "",
+            "api_key_env": "LMSTUDIO_API_KEY",
+            "base_url": "http://othello.local:1234/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "mancer",
+            "display_name": "Mancer",
+            "description": "",
+            "api_key_env": "MANCER_API_KEY",
+            "base_url": "https://neuro.mancer.tech/oai/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "mistral",
+            "display_name": "Mistral AI",
+            "description": "La Plateforme access to Mixtral + Large models under the experiment tier.",
+            "api_key_env": "MISTRAL_API_KEY",
+            "base_url": "https://api.mistral.ai/v1",
+            "capabilities": {
+                "llm_chat": true,
+                "embeddings": true,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": "ragie",
+            "default_models": {
+                "generation": "mistral-large-latest",
+                "fast_generation": "mistral-small-latest",
+                "embedding": "mistral-embed"
+            },
+            "default_solution": null,
+            "metadata": {
+                "tier": "free",
+                "latency": "medium",
+                "insights": {
+                    "mistral-la-plateforme": {
+                        "slug": "mistral-la-plateforme",
+                        "name": "Mistral La Plateforme \u2013 Experiment tier",
+                        "category": "llm",
+                        "reset_window": "hybrid_daily_monthly",
+                        "commercial_use": "Free tier restricted to prototyping with opt-in data training; production traffic requires upgrade.",
+                        "notes": "Mistral confirms a renewable but restrictive experiment tier (~1B tokens/day, 500K TPM, 1 RPS) plus a Codestral-specific cap of 2,000 RPD. Actual dashboards hide precise per-model numbers until signup.",
+                        "modalities": [
+                            "text",
+                            "code",
+                            "vision"
+                        ],
+                        "recommended_roles": [
+                            "eu_resident_llm",
+                            "evaluation_only"
+                        ],
+                        "free_tier": {
+                            "tokens_per_day": 1000000000,
+                            "tokens_per_minute": 500000,
+                            "requests_per_second": 1,
+                            "codestral_requests_per_day": 2000,
+                            "codestral_requests_per_minute": 30
+                        },
+                        "sources": [
+                            {
+                                "path": "reference/research-ai-api/01-gem.md",
+                                "sha256": "861c4f4e4f5fef6d088fa1a1987b0084c3e6f0b1aa28e7a6d0d03e87a7559832",
+                                "start_line": 134,
+                                "end_line": 140
+                            },
+                            {
+                                "path": "reference/research-ai-api/02-gem.md",
+                                "sha256": "77c5d13b3146293f609cb47811f22848b814e83d2d8ad83e46e5831a1831d4e4",
+                                "start_line": 15,
+                                "end_line": 21
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "slug": "moonshot",
+            "display_name": "Moonshot",
+            "description": "",
+            "api_key_env": "MOONSHOT_API_KEY",
+            "base_url": "https://api.moonshot.ai/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "morphllm",
+            "display_name": "Morphllm",
+            "description": "",
+            "api_key_env": "MORPHLLM_API_KEY",
+            "base_url": "https://api.morphllm.com/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "nebius",
+            "display_name": "Nebius",
+            "description": "",
+            "api_key_env": "NEBIUS_API_KEY",
+            "base_url": "https://api.studio.nebius.com/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "nineteenai",
+            "display_name": "Nineteenai",
+            "description": "",
+            "api_key_env": "NINETEENAI_API_KEY",
+            "base_url": "https://api.nineteen.ai/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "novita",
+            "display_name": "Novita",
+            "description": "",
+            "api_key_env": "NOVITA_API_KEY",
+            "base_url": "https://api.novita.ai/v3/openai",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "openai",
+            "display_name": "OpenAI",
+            "description": "Flagship GPT-4o/4.1 models plus moderation + embeddings.",
+            "api_key_env": "OPENAI_API_KEY",
+            "base_url": "https://api.openai.com/v1",
+            "capabilities": {
+                "llm_chat": true,
+                "embeddings": true,
+                "vector_store": false,
+                "moderation": true,
+                "image_generation": true,
+                "byok": false
+            },
+            "model_count": 83,
+            "models": [
+                "babbage-002",
+                "chatgpt-4o-latest",
+                "dall-e-2",
+                "dall-e-3",
+                "davinci-002",
+                "gpt-3.5-turbo",
+                "gpt-3.5-turbo-0125",
+                "gpt-3.5-turbo-16k",
+                "gpt-3.5-turbo-1106",
+                "gpt-3.5-turbo-instruct",
+                "gpt-3.5-turbo-instruct-0914",
+                "gpt-4",
+                "gpt-4-0125-preview",
+                "gpt-4-0613",
+                "gpt-4-1106-preview",
+                "gpt-4-turbo",
+                "gpt-4-turbo-2024-04-09",
+                "gpt-4-turbo-preview",
+                "gpt-4.1",
+                "gpt-4.1-2025-04-14",
+                "gpt-4.1-mini",
+                "gpt-4.1-mini-2025-04-14",
+                "gpt-4.1-nano",
+                "gpt-4.1-nano-2025-04-14",
+                "gpt-4o",
+                "gpt-4o-2024-05-13",
+                "gpt-4o-2024-08-06",
+                "gpt-4o-2024-11-20",
+                "gpt-4o-audio-preview",
+                "gpt-4o-audio-preview-2024-10-01",
+                "gpt-4o-audio-preview-2024-12-17",
+                "gpt-4o-audio-preview-2025-06-03",
+                "gpt-4o-mini",
+                "gpt-4o-mini-2024-07-18",
+                "gpt-4o-mini-audio-preview",
+                "gpt-4o-mini-audio-preview-2024-12-17",
+                "gpt-4o-mini-realtime-preview",
+                "gpt-4o-mini-realtime-preview-2024-12-17",
+                "gpt-4o-mini-search-preview",
+                "gpt-4o-mini-search-preview-2025-03-11",
+                "gpt-4o-mini-transcribe",
+                "gpt-4o-mini-tts",
+                "gpt-4o-realtime-preview",
+                "gpt-4o-realtime-preview-2024-10-01",
+                "gpt-4o-realtime-preview-2024-12-17",
+                "gpt-4o-realtime-preview-2025-06-03",
+                "gpt-4o-search-preview",
+                "gpt-4o-search-preview-2025-03-11",
+                "gpt-4o-transcribe",
+                "gpt-5",
+                "gpt-5-2025-08-07",
+                "gpt-5-chat-latest",
+                "gpt-5-mini",
+                "gpt-5-mini-2025-08-07",
+                "gpt-5-nano",
+                "gpt-5-nano-2025-08-07",
+                "gpt-audio",
+                "gpt-audio-2025-08-28",
+                "gpt-image-1",
+                "gpt-realtime",
+                "gpt-realtime-2025-08-28",
+                "o1",
+                "o1-2024-12-17",
+                "o1-mini",
+                "o1-mini-2024-09-12",
+                "o1-pro",
+                "o1-pro-2025-03-19",
+                "o3",
+                "o3-2025-04-16",
+                "o3-mini",
+                "o3-mini-2025-01-31",
+                "o4-mini",
+                "o4-mini-2025-04-16",
+                "omni-moderation-2024-09-26",
+                "omni-moderation-latest",
+                "text-embedding-3-large",
+                "text-embedding-3-small",
+                "text-embedding-ada-002",
+                "tts-1",
+                "tts-1-1106",
+                "tts-1-hd",
+                "tts-1-hd-1106",
+                "whisper-1"
+            ],
+            "embedding_dimensions": {
+                "text-embedding-3-small": 1536,
+                "text-embedding-3-large": 3072
+            },
+            "preferred_vector_store": "ragie",
+            "default_models": {
+                "generation": "gpt-4o-mini",
+                "fast_generation": "gpt-4o-mini",
+                "embedding": "text-embedding-3-small",
+                "moderation": "omni-moderation-latest"
+            },
+            "default_solution": {
+                "type": "ragie",
+                "ragie_partition": "default",
+                "default_options": {
+                    "top_k": 8,
+                    "rerank": true
+                }
+            },
+            "metadata": {
+                "tier": "paid",
+                "latency": "medium"
+            }
+        },
+        {
+            "slug": "openrouter",
+            "display_name": "OpenRouter",
+            "description": "Router for 60+ hosted LLMs with renewable communal credits.",
+            "api_key_env": "OPENROUTER_API_KEY",
+            "base_url": "https://openrouter.ai/api/v1",
+            "capabilities": {
+                "llm_chat": true,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": true
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": {
+                "generation": "meta-llama/llama-3.1-70b-instruct",
+                "fast_generation": "qwen/qwen-2.5-14b-instruct"
+            },
+            "default_solution": null,
+            "metadata": {
+                "tier": "free",
+                "latency": "medium",
+                "insights": {
+                    "openrouter": {
+                        "slug": "openrouter",
+                        "name": "OpenRouter Free Aggregator",
+                        "category": "llm_router",
+                        "reset_window": "daily_utc",
+                        "commercial_use": "Allowed but subject to each upstream model license; aggregator enforces data-usage disclosures.",
+                        "notes": "OpenRouter routes to 50+ sponsor-backed models (DeepSeek, Llama, Mistral, Qwen, Gemma). Rate limits apply across the shared :free pool, making it ideal for comparative testing.",
+                        "modalities": [
+                            "text",
+                            "vision",
+                            "audio"
+                        ],
+                        "recommended_roles": [
+                            "multi_model_experiments",
+                            "fallback_llm"
+                        ],
+                        "free_tier": {
+                            "requests_per_day": 50,
+                            "requests_per_minute": 20,
+                            "upgrade_requests_per_day": 1000,
+                            "upgrade_condition": "$10 lifetime top-up unlocks 1,000 RPD across :free endpoints"
+                        },
+                        "sources": [
+                            {
+                                "path": "reference/research-ai-api/01-cla.md",
+                                "sha256": "cb1512796cd191d08bd422eeb56dd112139c6f691eefd988d57f09d3cd675a03",
+                                "start_line": 18,
+                                "end_line": 21
+                            },
+                            {
+                                "path": "reference/research-ai-api/02-gem.md",
+                                "sha256": "77c5d13b3146293f609cb47811f22848b814e83d2d8ad83e46e5831a1831d4e4",
+                                "start_line": 13,
+                                "end_line": 20
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "slug": "parasail",
+            "display_name": "Parasail",
+            "description": "",
+            "api_key_env": "PARASAIL_API_KEY",
+            "base_url": "https://api.parasail.io/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "perplexity",
+            "display_name": "Perplexity",
+            "description": "",
+            "api_key_env": "PERPLEXITYAI_API_KEY",
+            "base_url": "https://api.perplexity.ai",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "pinecone",
+            "display_name": "Pinecone",
+            "description": "Managed vector store with starter pods for prototypes.",
+            "api_key_env": "PINECONE_API_KEY",
+            "base_url": "https://controller.us-east1-gcp.pinecone.io",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": true,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": "pinecone",
+            "default_models": [],
+            "default_solution": {
+                "type": "pinecone"
+            },
+            "metadata": {
+                "tier": "free",
+                "latency": "medium",
+                "insights": {
+                    "pinecone-starter": {
+                        "slug": "pinecone-starter",
+                        "name": "Pinecone Starter Vector DB",
+                        "category": "vector_database",
+                        "reset_window": "monthly",
+                        "commercial_use": "Starter tier supports production prototypes; additional throughput available via paid serverless tiers.",
+                        "notes": "Pinecone's Starter tier offers 2 GB storage, around a million 768-d vectors, and millions of monthly read/write units focused on AWS us-east-1. Ideal for validating retrieval pipelines before upgrading.",
+                        "modalities": [
+                            "vector_store"
+                        ],
+                        "recommended_roles": [
+                            "primary_vector_store",
+                            "starter_rag_stack"
+                        ],
+                        "free_tier": {
+                            "storage_gb": 2,
+                            "indexes": 1,
+                            "write_units_per_month": 2000000,
+                            "read_units_per_month": 1000000
+                        },
+                        "sources": [
+                            {
+                                "path": "reference/research-ai-api/02-gpt.md",
+                                "sha256": "590f026b4ff8e485756a5f03d5df1535369a1c9860f72f8ce13f7280921a71fa",
+                                "start_line": 166,
+                                "end_line": 174
+                            },
+                            {
+                                "path": "reference/research-ai-api/02-gem.md",
+                                "sha256": "77c5d13b3146293f609cb47811f22848b814e83d2d8ad83e46e5831a1831d4e4",
+                                "start_line": 73,
+                                "end_line": 78
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "slug": "poe",
+            "display_name": "Poe",
+            "description": "",
+            "api_key_env": "POE_API_KEY",
+            "base_url": "https://api.poe.com/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "pollinations",
+            "display_name": "Pollinations",
+            "description": "",
+            "api_key_env": "POLLINATIONS_API_KEY",
+            "base_url": "https://text.pollinations.ai/openai",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "qdrant",
+            "display_name": "Qdrant Serverless",
+            "description": "Fully-managed vector store with forever-free tier.",
+            "api_key_env": "QDRANT_API_KEY",
+            "base_url": "https://api.qdrant.tech",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": true,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": "qdrant",
+            "default_models": [],
+            "default_solution": {
+                "type": "qdrant"
+            },
+            "metadata": {
+                "tier": "free",
+                "latency": "medium",
+                "insights": {
+                    "qdrant-cloud-free": {
+                        "slug": "qdrant-cloud-free",
+                        "name": "Qdrant Cloud Free Cluster",
+                        "category": "vector_database",
+                        "reset_window": "permanent",
+                        "commercial_use": "Free forever for active clusters; production allowed while usage stays within limits.",
+                        "notes": "Qdrant Cloud's 1 GB permanent tier covers roughly one million 768-d vectors and needs periodic traffic to avoid suspension, making it a perfect safety net for budget RAG deployments.",
+                        "modalities": [
+                            "vector_store"
+                        ],
+                        "recommended_roles": [
+                            "forever_free_vector",
+                            "fallback_vector_store"
+                        ],
+                        "free_tier": {
+                            "storage_gb": 1,
+                            "vector_capacity": 1000000,
+                            "suspension_policy": "Clusters pause after ~7 idle days and purge after ~4 weeks of inactivity"
+                        },
+                        "sources": [
+                            {
+                                "path": "reference/research-ai-api/02-gpt.md",
+                                "sha256": "590f026b4ff8e485756a5f03d5df1535369a1c9860f72f8ce13f7280921a71fa",
+                                "start_line": 171,
+                                "end_line": 175
+                            },
+                            {
+                                "path": "reference/research-ai-api/02-gem.md",
+                                "sha256": "77c5d13b3146293f609cb47811f22848b814e83d2d8ad83e46e5831a1831d4e4",
+                                "start_line": 75,
+                                "end_line": 78
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "slug": "ragie",
+            "display_name": "Ragie",
+            "description": "Primary retrieval layer powering ParaGra.",
+            "api_key_env": "RAGIE_API_KEY",
+            "base_url": "https://api.ragie.ai",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": true,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": "ragie",
+            "default_models": [],
+            "default_solution": null,
+            "metadata": {
+                "tier": "paid",
+                "latency": "medium"
+            }
+        },
+        {
+            "slug": "redpill",
+            "display_name": "Redpill",
+            "description": "",
+            "api_key_env": "REDPILL_API_KEY",
+            "base_url": "https://api.redpill.ai/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "sambanova",
+            "display_name": "Sambanova",
+            "description": "",
+            "api_key_env": "SAMBANOVA_API_KEY",
+            "base_url": "https://api.sambanova.ai/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "siliconflow",
+            "display_name": "Siliconflow",
+            "description": "",
+            "api_key_env": "SILICONFLOW_API_KEY",
+            "base_url": "https://api.siliconflow.com/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "targon",
+            "display_name": "Targon",
+            "description": "",
+            "api_key_env": "TARGON_API_KEY",
+            "base_url": "https://api.targon.com/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "togetherai",
+            "display_name": "Togetherai",
+            "description": "",
+            "api_key_env": "TOGETHERAI_API_KEY",
+            "base_url": "https://api.together.xyz/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "vectara",
+            "display_name": "Vectara",
+            "description": "Managed RAG stack with ingestion, hallucination defense, and Cerebras/OpenAI routing.",
+            "api_key_env": null,
+            "base_url": null,
+            "capabilities": {
+                "llm_chat": true,
+                "embeddings": true,
+                "vector_store": true,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": {
+                "tier": "hosted",
+                "latency": "medium",
+                "insights": {
+                    "vectara-platform": {
+                        "slug": "vectara-platform",
+                        "name": "Vectara Managed RAG Platform",
+                        "category": "hosted_rag",
+                        "reset_window": "subscription",
+                        "commercial_use": "SOC 2/ISO-ready managed service with 30-day evaluation followed by paid contracts.",
+                        "notes": "Vectara bundles ingestion, hallucination defenses, and routing into Cerebras/OpenAI stacks so teams can deploy full RAG chatbots in hours. The managed backend handles chunking, citation UX, and autoscaling once the paid tier activates.",
+                        "modalities": [
+                            "rag",
+                            "llm_router"
+                        ],
+                        "recommended_roles": [
+                            "hosted_enterprise_rag",
+                            "hallucination_guardrails"
+                        ],
+                        "free_tier": {
+                            "trial_days": 30,
+                            "estimated_monthly_cost_usd_min": 500,
+                            "estimated_monthly_cost_usd_max": 2000
+                        },
+                        "sources": [
+                            {
+                                "path": "reference/research-rag/ragres-07.md",
+                                "sha256": "7a3dfd6b76169a6ac833c2005bbd818cd8c29b9739f78a1a815ecb0239b297cd",
+                                "start_line": 70,
+                                "end_line": 80
+                            },
+                            {
+                                "path": "reference/research-rag/ragres-07.md",
+                                "sha256": "7a3dfd6b76169a6ac833c2005bbd818cd8c29b9739f78a1a815ecb0239b297cd",
+                                "start_line": 185,
+                                "end_line": 210
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "slug": "voyage",
+            "display_name": "Voyage AI",
+            "description": "High-quality embeddings + rerankers tuned for reasoning tasks.",
+            "api_key_env": "VOYAGE_API_KEY",
+            "base_url": "https://api.voyageai.com/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": true,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": {
+                "voyage-3-large": 3072
+            },
+            "preferred_vector_store": null,
+            "default_models": {
+                "embedding": "voyage-3-large"
+            },
+            "default_solution": null,
+            "metadata": {
+                "tier": "free",
+                "latency": "medium",
+                "insights": {
+                    "voyage-embeddings": {
+                        "slug": "voyage-embeddings",
+                        "name": "Voyage AI Embedding API",
+                        "category": "embedding",
+                        "reset_window": "one_time_credit_then_payg",
+                        "commercial_use": "Allowed; generous starter credit encourages production migrations after testing.",
+                        "notes": "Voyage grants 200M free tokens on signup, then charges roughly $0.10\u2013$0.40 per million tokens for voyage-3-large, making it ideal for massive initial indexing jobs before pay-as-you-go kicks in.",
+                        "modalities": [
+                            "embedding",
+                            "rerank"
+                        ],
+                        "recommended_roles": [
+                            "high_volume_embeddings",
+                            "code_search"
+                        ],
+                        "free_tier": {
+                            "one_time_tokens": 200000000,
+                            "paid_rate_per_million_tokens_usd_min": 0,
+                            "paid_rate_per_million_tokens_usd_max": 0
+                        },
+                        "sources": [
+                            {
+                                "path": "reference/research-embedding/emb-gro.md",
+                                "sha256": "79fbcaffbd639353efd330596d8d5c1421df7df2d2b2724f69770816b3effa3b",
+                                "start_line": 55,
+                                "end_line": 70
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "slug": "xai",
+            "display_name": "Xai",
+            "description": "",
+            "api_key_env": "XAI_API_KEY",
+            "base_url": "https://api.x.ai/v1",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        },
+        {
+            "slug": "zai",
+            "display_name": "Zai",
+            "description": "",
+            "api_key_env": "ZAI_API_KEY",
+            "base_url": "https://api.z.ai/api/paas/v4",
+            "capabilities": {
+                "llm_chat": false,
+                "embeddings": false,
+                "vector_store": false,
+                "moderation": false,
+                "image_generation": false,
+                "byok": false
+            },
+            "model_count": 0,
+            "models": [],
+            "embedding_dimensions": [],
+            "preferred_vector_store": null,
+            "default_models": [],
+            "default_solution": null,
+            "metadata": []
+        }
+    ]
+}

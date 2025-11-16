@@ -1,0 +1,7 @@
+/vendor/
+/.php-cs-fixer.cache
+/.psalm-cache/
+/.phpunit.cache/
+/coverage/
+/.idea/
+/.vscode/

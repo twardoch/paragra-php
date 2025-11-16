@@ -1,0 +1,34 @@
+[00:00:00.000247502 / 00:00:00.000247502] [2969120 bytes] PHPUnit Started (PHPUnit 11.5.44 using PHP 8.4.13 (cli) on Darwin)
+[00:00:00.012350949 / 00:00:00.012103447] [4731720 bytes] Test Runner Configured
+[00:00:00.012566185 / 00:00:00.000215236] [4731720 bytes] Bootstrap Finished (/Users/adam/Developer/vcs/github.twardoch/pub/rag-projects/paragra-php/vendor/autoload.php)
+[00:00:00.019900796 / 00:00:00.007334611] [5038672 bytes] Event Facade Sealed
+[00:00:00.029752706 / 00:00:00.009851910] [6412448 bytes] Test Runner Triggered Deprecation (Metadata found in doc-comment for class ParaGra\Tests\Config\ProviderSpecTest. Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.)
+[00:00:00.032746748 / 00:00:00.002994042] [6584000 bytes] Test Suite Loaded (4 tests)
+[00:00:00.034105744 / 00:00:00.001358996] [7325096 bytes] Test Runner Started
+[00:00:00.034235884 / 00:00:00.000130140] [7325096 bytes] Test Suite Sorted
+[00:00:00.034646762 / 00:00:00.000410878] [7325096 bytes] Test Runner Execution Started (4 tests)
+[00:00:00.034750713 / 00:00:00.000103951] [7325096 bytes] Test Suite Started (/Users/adam/Developer/vcs/github.twardoch/pub/rag-projects/paragra-php/phpunit.xml.dist, 4 tests)
+[00:00:00.034843601 / 00:00:00.000092888] [7325096 bytes] Test Suite Started (ParaGra Test Suite, 4 tests)
+[00:00:00.035030131 / 00:00:00.000186530] [7325096 bytes] Test Suite Started (ParaGra\Tests\Config\ProviderSpecTest, 4 tests)
+[00:00:00.036365028 / 00:00:00.001334897] [7325096 bytes] Test Preparation Started (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_data_valid_then_returns_instance)
+[00:00:00.036508692 / 00:00:00.000143664] [7165224 bytes] Test Prepared (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_data_valid_then_returns_instance)
+[00:00:00.037268356 / 00:00:00.000759664] [7260456 bytes] Test Passed (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_data_valid_then_returns_instance)
+[00:00:00.039429489 / 00:00:00.002161133] [7426344 bytes] Test Finished (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_data_valid_then_returns_instance)
+[00:00:00.039539365 / 00:00:00.000109876] [7426344 bytes] Test Preparation Started (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_required_key_missing_then_throws)
+[00:00:00.039660105 / 00:00:00.000120740] [7394552 bytes] Test Prepared (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_required_key_missing_then_throws)
+[00:00:00.040085356 / 00:00:00.000425251] [7459424 bytes] Test Passed (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_required_key_missing_then_throws)
+[00:00:00.040225112 / 00:00:00.000139756] [7459424 bytes] Test Finished (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_required_key_missing_then_throws)
+[00:00:00.040315858 / 00:00:00.000090746] [7459424 bytes] Test Preparation Started (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_solution_not_array_then_throws)
+[00:00:00.040430665 / 00:00:00.000114807] [7409448 bytes] Test Prepared (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_solution_not_array_then_throws)
+[00:00:00.040515923 / 00:00:00.000085258] [7415544 bytes] Test Passed (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_solution_not_array_then_throws)
+[00:00:00.040640540 / 00:00:00.000124617] [7415544 bytes] Test Finished (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_solution_not_array_then_throws)
+[00:00:00.040725463 / 00:00:00.000084923] [7415544 bytes] Test Preparation Started (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_string_empty_then_throws)
+[00:00:00.040837734 / 00:00:00.000112271] [7408736 bytes] Test Prepared (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_string_empty_then_throws)
+[00:00:00.040925946 / 00:00:00.000088212] [7415536 bytes] Test Passed (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_string_empty_then_throws)
+[00:00:00.041050301 / 00:00:00.000124355] [7415536 bytes] Test Finished (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_string_empty_then_throws)
+[00:00:00.041202654 / 00:00:00.000152353] [7415536 bytes] Test Suite Finished (ParaGra\Tests\Config\ProviderSpecTest, 4 tests)
+[00:00:00.041282023 / 00:00:00.000079369] [7415536 bytes] Test Suite Finished (ParaGra Test Suite, 4 tests)
+[00:00:00.041348364 / 00:00:00.000066341] [7415536 bytes] Test Suite Finished (/Users/adam/Developer/vcs/github.twardoch/pub/rag-projects/paragra-php/phpunit.xml.dist, 4 tests)
+[00:00:00.041411604 / 00:00:00.000063240] [7415536 bytes] Test Runner Execution Finished
+[00:00:00.041473334 / 00:00:00.000061730] [7415536 bytes] Test Runner Finished
+[00:00:00.042264667 / 00:00:00.000791333] [7550808 bytes] PHPUnit Finished (Shell Exit Code: 0)
