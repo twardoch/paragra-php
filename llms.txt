@@ -2385,7 +2385,6 @@ Project Structure:
 ├── 📄 DEPENDENCIES.md
 ├── 📄 llms.sh
 ├── 📄 phpstan.neon.dist
-├── 📄 phpunit-events.log
 ├── 📄 phpunit.xml.dist
 ├── 📄 psalm.xml
 └── 📄 README.md
@@ -2395,13 +2394,54 @@ Project Structure:
 <document index="1">
 <source>.gitignore</source>
 <document_content>
-/vendor/
-/.php-cs-fixer.cache
-/.psalm-cache/
-/.phpunit.cache/
-/coverage/
+._*
+.cache/
+.classpath
+.DS_Store
+.DS_Store?
+.phpunit.result.cache
+.project
+.settings/
+.Spotlight-V100
+.Trashes
+*.backup
+*.bak
+*.cache
+*.log
+*.orig
+*.phar
+*.pid
+*.pid.lock
+*.rej
+*.seed
+*.sublime-project
+*.sublime-workspace
+*.swo
+*.swp
+*.temp
+*.tmp
+*~
 /.idea/
+/.php-cs-fixer.cache
+/.phpstorm.meta.php/
+/.phpunit.cache/
+/.psalm-cache/
 /.vscode/
+/build/
+/config/paragra.php
+/coverage/
+/docs/_build/
+/docs/.doctrees/
+/test-output/
+/test-results/
+/vendor/
+$RECYCLE.BIN/
+composer.phar
+desktop.ini
+ehthumbs.db
+llms.txt
+phpunit-events.log
+Thumbs.db
 </document_content>
 </document>
 
@@ -7183,46 +7223,6 @@ parameters:
 </document>
 
 <document index="25">
-<source>phpunit-events.log</source>
-<document_content>
-[00:00:00.000247502 / 00:00:00.000247502] [2969120 bytes] PHPUnit Started (PHPUnit 11.5.44 using PHP 8.4.13 (cli) on Darwin)
-[00:00:00.012350949 / 00:00:00.012103447] [4731720 bytes] Test Runner Configured
-[00:00:00.012566185 / 00:00:00.000215236] [4731720 bytes] Bootstrap Finished (/Users/adam/Developer/vcs/github.twardoch/pub/rag-projects/paragra-php/vendor/autoload.php)
-[00:00:00.019900796 / 00:00:00.007334611] [5038672 bytes] Event Facade Sealed
-[00:00:00.029752706 / 00:00:00.009851910] [6412448 bytes] Test Runner Triggered Deprecation (Metadata found in doc-comment for class ParaGra\Tests\Config\ProviderSpecTest. Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.)
-[00:00:00.032746748 / 00:00:00.002994042] [6584000 bytes] Test Suite Loaded (4 tests)
-[00:00:00.034105744 / 00:00:00.001358996] [7325096 bytes] Test Runner Started
-[00:00:00.034235884 / 00:00:00.000130140] [7325096 bytes] Test Suite Sorted
-[00:00:00.034646762 / 00:00:00.000410878] [7325096 bytes] Test Runner Execution Started (4 tests)
-[00:00:00.034750713 / 00:00:00.000103951] [7325096 bytes] Test Suite Started (/Users/adam/Developer/vcs/github.twardoch/pub/rag-projects/paragra-php/phpunit.xml.dist, 4 tests)
-[00:00:00.034843601 / 00:00:00.000092888] [7325096 bytes] Test Suite Started (ParaGra Test Suite, 4 tests)
-[00:00:00.035030131 / 00:00:00.000186530] [7325096 bytes] Test Suite Started (ParaGra\Tests\Config\ProviderSpecTest, 4 tests)
-[00:00:00.036365028 / 00:00:00.001334897] [7325096 bytes] Test Preparation Started (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_data_valid_then_returns_instance)
-[00:00:00.036508692 / 00:00:00.000143664] [7165224 bytes] Test Prepared (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_data_valid_then_returns_instance)
-[00:00:00.037268356 / 00:00:00.000759664] [7260456 bytes] Test Passed (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_data_valid_then_returns_instance)
-[00:00:00.039429489 / 00:00:00.002161133] [7426344 bytes] Test Finished (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_data_valid_then_returns_instance)
-[00:00:00.039539365 / 00:00:00.000109876] [7426344 bytes] Test Preparation Started (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_required_key_missing_then_throws)
-[00:00:00.039660105 / 00:00:00.000120740] [7394552 bytes] Test Prepared (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_required_key_missing_then_throws)
-[00:00:00.040085356 / 00:00:00.000425251] [7459424 bytes] Test Passed (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_required_key_missing_then_throws)
-[00:00:00.040225112 / 00:00:00.000139756] [7459424 bytes] Test Finished (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_required_key_missing_then_throws)
-[00:00:00.040315858 / 00:00:00.000090746] [7459424 bytes] Test Preparation Started (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_solution_not_array_then_throws)
-[00:00:00.040430665 / 00:00:00.000114807] [7409448 bytes] Test Prepared (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_solution_not_array_then_throws)
-[00:00:00.040515923 / 00:00:00.000085258] [7415544 bytes] Test Passed (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_solution_not_array_then_throws)
-[00:00:00.040640540 / 00:00:00.000124617] [7415544 bytes] Test Finished (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_solution_not_array_then_throws)
-[00:00:00.040725463 / 00:00:00.000084923] [7415544 bytes] Test Preparation Started (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_string_empty_then_throws)
-[00:00:00.040837734 / 00:00:00.000112271] [7408736 bytes] Test Prepared (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_string_empty_then_throws)
-[00:00:00.040925946 / 00:00:00.000088212] [7415536 bytes] Test Passed (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_string_empty_then_throws)
-[00:00:00.041050301 / 00:00:00.000124355] [7415536 bytes] Test Finished (ParaGra\Tests\Config\ProviderSpecTest::test_from_array_when_string_empty_then_throws)
-[00:00:00.041202654 / 00:00:00.000152353] [7415536 bytes] Test Suite Finished (ParaGra\Tests\Config\ProviderSpecTest, 4 tests)
-[00:00:00.041282023 / 00:00:00.000079369] [7415536 bytes] Test Suite Finished (ParaGra Test Suite, 4 tests)
-[00:00:00.041348364 / 00:00:00.000066341] [7415536 bytes] Test Suite Finished (/Users/adam/Developer/vcs/github.twardoch/pub/rag-projects/paragra-php/phpunit.xml.dist, 4 tests)
-[00:00:00.041411604 / 00:00:00.000063240] [7415536 bytes] Test Runner Execution Finished
-[00:00:00.041473334 / 00:00:00.000061730] [7415536 bytes] Test Runner Finished
-[00:00:00.042264667 / 00:00:00.000791333] [7550808 bytes] PHPUnit Finished (Shell Exit Code: 0)
-</document_content>
-</document>
-
-<document index="26">
 <source>phpunit.xml.dist</source>
 <document_content>
 <?xml version="1.0" encoding="UTF-8"?>
@@ -7241,7 +7241,7 @@ parameters:
 </document_content>
 </document>
 
-<document index="27">
+<document index="26">
 <source>psalm.xml</source>
 <document_content>
 <?xml version="1.0"?>
@@ -7268,7 +7268,7 @@ parameters:
 </document_content>
 </document>
 
-<document index="28">
+<document index="27">
 <source>src/Assistant/AskYodaHostedAdapter.php</source>
 <document_content>
 <?php
@@ -7424,7 +7424,7 @@ final class AskYodaHostedAdapter
 </document_content>
 </document>
 
-<document index="29">
+<document index="28">
 <source>src/Assistant/AskYodaHostedResult.php</source>
 <document_content>
 <?php
@@ -7467,7 +7467,7 @@ final class AskYodaHostedResult
 </document_content>
 </document>
 
-<document index="30">
+<document index="29">
 <source>src/Assistant/RagAnswer.php</source>
 <document_content>
 <?php
@@ -7582,7 +7582,7 @@ final class RagAnswer
 </document_content>
 </document>
 
-<document index="31">
+<document index="30">
 <source>src/Assistant/RagAnswerer.php</source>
 <document_content>
 <?php
@@ -7899,7 +7899,7 @@ final class RagAnswerer
 </document_content>
 </document>
 
-<document index="32">
+<document index="31">
 <source>src/Config/PriorityPool.php</source>
 <document_content>
 <?php
@@ -8145,7 +8145,7 @@ final class PriorityPool
 </document_content>
 </document>
 
-<document index="33">
+<document index="32">
 <source>src/Config/ProviderSpec.php</source>
 <document_content>
 <?php
@@ -8246,7 +8246,7 @@ final class ProviderSpec
 </document_content>
 </document>
 
-<document index="34">
+<document index="33">
 <source>src/Embedding/CohereEmbeddingConfig.php</source>
 <document_content>
 <?php
@@ -8385,7 +8385,7 @@ final class CohereEmbeddingConfig
 </document_content>
 </document>
 
-<document index="35">
+<document index="34">
 <source>src/Embedding/CohereEmbeddingProvider.php</source>
 <document_content>
 <?php
@@ -8654,7 +8654,7 @@ final class CohereEmbeddingProvider implements EmbeddingProviderInterface
 </document_content>
 </document>
 
-<document index="36">
+<document index="35">
 <source>src/Embedding/EmbeddingProviderInterface.php</source>
 <document_content>
 <?php
@@ -8716,7 +8716,7 @@ interface EmbeddingProviderInterface
 </document_content>
 </document>
 
-<document index="37">
+<document index="36">
 <source>src/Embedding/EmbeddingRequest.php</source>
 <document_content>
 <?php
@@ -8990,7 +8990,7 @@ final class EmbeddingRequest
 </document_content>
 </document>
 
-<document index="38">
+<document index="37">
 <source>src/Embedding/GeminiEmbeddingConfig.php</source>
 <document_content>
 <?php
@@ -9144,7 +9144,7 @@ final class GeminiEmbeddingConfig
 </document_content>
 </document>
 
-<document index="39">
+<document index="38">
 <source>src/Embedding/GeminiEmbeddingProvider.php</source>
 <document_content>
 <?php
@@ -9352,7 +9352,7 @@ final class GeminiEmbeddingProvider implements EmbeddingProviderInterface
 </document_content>
 </document>
 
-<document index="40">
+<document index="39">
 <source>src/Embedding/OpenAiEmbeddingConfig.php</source>
 <document_content>
 <?php
@@ -9420,7 +9420,7 @@ final class OpenAiEmbeddingConfig
 </document_content>
 </document>
 
-<document index="41">
+<document index="40">
 <source>src/Embedding/OpenAiEmbeddingProvider.php</source>
 <document_content>
 <?php
@@ -9601,7 +9601,7 @@ final class OpenAiEmbeddingProvider implements EmbeddingProviderInterface
 </document_content>
 </document>
 
-<document index="42">
+<document index="41">
 <source>src/Embedding/VoyageEmbeddingConfig.php</source>
 <document_content>
 <?php
@@ -9801,7 +9801,7 @@ final class VoyageEmbeddingConfig
 </document_content>
 </document>
 
-<document index="43">
+<document index="42">
 <source>src/Embedding/VoyageEmbeddingProvider.php</source>
 <document_content>
 <?php
@@ -10044,7 +10044,7 @@ final class VoyageEmbeddingProvider implements EmbeddingProviderInterface
 </document_content>
 </document>
 
-<document index="44">
+<document index="43">
 <source>src/Exception/ConfigurationException.php</source>
 <document_content>
 <?php
@@ -10119,7 +10119,7 @@ class ConfigurationException extends RuntimeException
 </document_content>
 </document>
 
-<document index="45">
+<document index="44">
 <source>src/ExternalSearch/ExternalSearchException.php</source>
 <document_content>
 <?php
@@ -10142,7 +10142,7 @@ final class ExternalSearchException extends RuntimeException
 </document_content>
 </document>
 
-<document index="46">
+<document index="45">
 <source>src/ExternalSearch/ExternalSearchRetrieverInterface.php</source>
 <document_content>
 <?php
@@ -10182,7 +10182,7 @@ interface ExternalSearchRetrieverInterface
 </document_content>
 </document>
 
-<document index="47">
+<document index="46">
 <source>src/ExternalSearch/TwatSearchRetriever.php</source>
 <document_content>
 <?php
@@ -10738,7 +10738,7 @@ final class TwatSearchRetriever implements ExternalSearchRetrieverInterface
 </document_content>
 </document>
 
-<document index="48">
+<document index="47">
 <source>src/Llm/AskYodaClient.php</source>
 <document_content>
 <?php
@@ -10862,7 +10862,7 @@ class AskYodaClient
 </document_content>
 </document>
 
-<document index="49">
+<document index="48">
 <source>src/Llm/AskYodaResponse.php</source>
 <document_content>
 <?php
@@ -10977,7 +10977,7 @@ class AskYodaResponse
 </document_content>
 </document>
 
-<document index="50">
+<document index="49">
 <source>src/Llm/ChatRequestOptions.php</source>
 <document_content>
 <?php
@@ -11001,7 +11001,7 @@ final class ChatRequestOptions
 </document_content>
 </document>
 
-<document index="51">
+<document index="50">
 <source>src/Llm/ChatResponse.php</source>
 <document_content>
 <?php
@@ -11042,7 +11042,7 @@ final class ChatResponse
 </document_content>
 </document>
 
-<document index="52">
+<document index="51">
 <source>src/Llm/ChatUsage.php</source>
 <document_content>
 <?php
@@ -11065,7 +11065,7 @@ final class ChatUsage
 </document_content>
 </document>
 
-<document index="53">
+<document index="52">
 <source>src/Llm/NeuronAiAdapter.php</source>
 <document_content>
 <?php
@@ -11219,7 +11219,7 @@ final class NeuronAiAdapter
 </document_content>
 </document>
 
-<document index="54">
+<document index="53">
 <source>src/Llm/OpenAiChatClient.php</source>
 <document_content>
 <?php
@@ -11323,7 +11323,7 @@ final class OpenAiChatClient
 </document_content>
 </document>
 
-<document index="55">
+<document index="54">
 <source>src/Llm/OpenAiChatConfig.php</source>
 <document_content>
 <?php
@@ -11389,7 +11389,7 @@ final class OpenAiChatConfig
 </document_content>
 </document>
 
-<document index="56">
+<document index="55">
 <source>src/Llm/PromptBuilder.php</source>
 <document_content>
 <?php
@@ -11438,7 +11438,7 @@ PROMPT;
 </document_content>
 </document>
 
-<document index="57">
+<document index="56">
 <source>src/Media/ChutesImageProvider.php</source>
 <document_content>
 <?php
@@ -11799,7 +11799,7 @@ final class ChutesImageProvider implements ImageOperationInterface
 </document_content>
 </document>
 
-<document index="58">
+<document index="57">
 <source>src/Media/FalImageProvider.php</source>
 <document_content>
 <?php
@@ -12148,7 +12148,7 @@ final class FalImageProvider implements ImageOperationInterface
 </document_content>
 </document>
 
-<document index="59">
+<document index="58">
 <source>src/Media/ImageOperationInterface.php</source>
 <document_content>
 <?php
@@ -12169,7 +12169,7 @@ interface ImageOperationInterface
 </document_content>
 </document>
 
-<document index="60">
+<document index="59">
 <source>src/Media/MediaException.php</source>
 <document_content>
 <?php
@@ -12188,7 +12188,7 @@ final class MediaException extends RuntimeException
 </document_content>
 </document>
 
-<document index="61">
+<document index="60">
 <source>src/Media/MediaRequest.php</source>
 <document_content>
 <?php
@@ -12470,7 +12470,7 @@ final class MediaRequest
 </document_content>
 </document>
 
-<document index="62">
+<document index="61">
 <source>src/Media/MediaResult.php</source>
 <document_content>
 <?php
@@ -12701,7 +12701,7 @@ final class MediaResult
 </document_content>
 </document>
 
-<document index="63">
+<document index="62">
 <source>src/Moderation/ModerationException.php</source>
 <document_content>
 <?php
@@ -12763,7 +12763,7 @@ class ModerationException extends \RuntimeException
 </document_content>
 </document>
 
-<document index="64">
+<document index="63">
 <source>src/Moderation/ModerationResult.php</source>
 <document_content>
 <?php
@@ -12837,7 +12837,7 @@ class ModerationResult
 </document_content>
 </document>
 
-<document index="65">
+<document index="64">
 <source>src/Moderation/ModeratorInterface.php</source>
 <document_content>
 <?php
@@ -12868,7 +12868,7 @@ interface ModeratorInterface
 </document_content>
 </document>
 
-<document index="66">
+<document index="65">
 <source>src/Moderation/NullModerator.php</source>
 <document_content>
 <?php
@@ -12901,7 +12901,7 @@ final class NullModerator implements ModeratorInterface
 </document_content>
 </document>
 
-<document index="67">
+<document index="66">
 <source>src/Moderation/OpenAiModerator.php</source>
 <document_content>
 <?php
@@ -13030,7 +13030,7 @@ class OpenAiModerator implements ModeratorInterface
 </document_content>
 </document>
 
-<document index="68">
+<document index="67">
 <source>src/ParaGra.php</source>
 <document_content>
 <?php
@@ -13262,7 +13262,7 @@ final class ParaGra
 </document_content>
 </document>
 
-<document index="69">
+<document index="68">
 <source>src/Pipeline/HybridRetrievalPipeline.php</source>
 <document_content>
 <?php
@@ -13681,7 +13681,7 @@ final class HybridRetrievalPipeline
 </document_content>
 </document>
 
-<document index="70">
+<document index="69">
 <source>src/Planner/PoolBuilder.php</source>
 <document_content>
 <?php
@@ -14163,7 +14163,7 @@ final class PoolBuilder
 </document_content>
 </document>
 
-<document index="71">
+<document index="70">
 <source>src/ProviderCatalog/CapabilityMap.php</source>
 <document_content>
 <?php
@@ -14282,7 +14282,7 @@ final class CapabilityMap
 </document_content>
 </document>
 
-<document index="72">
+<document index="71">
 <source>src/ProviderCatalog/ProviderDiscovery.php</source>
 <document_content>
 <?php
@@ -14479,7 +14479,7 @@ final class ProviderDiscovery
 </document_content>
 </document>
 
-<document index="73">
+<document index="72">
 <source>src/ProviderCatalog/ProviderSummary.php</source>
 <document_content>
 <?php
@@ -14724,7 +14724,7 @@ final class ProviderSummary
 </document_content>
 </document>
 
-<document index="74">
+<document index="73">
 <source>src/Providers/AbstractProvider.php</source>
 <document_content>
 <?php
@@ -14858,7 +14858,7 @@ abstract class AbstractProvider implements ProviderInterface
 </document_content>
 </document>
 
-<document index="75">
+<document index="74">
 <source>src/Providers/AskYodaProvider.php</source>
 <document_content>
 <?php
@@ -15131,7 +15131,7 @@ final class AskYodaProvider extends AbstractProvider
 </document_content>
 </document>
 
-<document index="76">
+<document index="75">
 <source>src/Providers/GeminiFileSearchProvider.php</source>
 <document_content>
 <?php
@@ -15411,7 +15411,7 @@ final class GeminiFileSearchProvider extends AbstractProvider
 </document_content>
 </document>
 
-<document index="77">
+<document index="76">
 <source>src/Providers/ProviderFactory.php</source>
 <document_content>
 <?php
@@ -15564,7 +15564,7 @@ final class ProviderFactory
 </document_content>
 </document>
 
-<document index="78">
+<document index="77">
 <source>src/Providers/ProviderInterface.php</source>
 <document_content>
 <?php
@@ -15616,7 +15616,7 @@ interface ProviderInterface
 </document_content>
 </document>
 
-<document index="79">
+<document index="78">
 <source>src/Providers/RagieProvider.php</source>
 <document_content>
 <?php
@@ -15786,7 +15786,7 @@ final class RagieProvider extends AbstractProvider
 </document_content>
 </document>
 
-<document index="80">
+<document index="79">
 <source>src/ReferenceCatalog/ProviderCatalogBuilder.php</source>
 <document_content>
 <?php
@@ -15992,7 +15992,7 @@ final class ProviderCatalogBuilder
 </document_content>
 </document>
 
-<document index="81">
+<document index="80">
 <source>src/Response/UnifiedResponse.php</source>
 <document_content>
 <?php
@@ -16233,7 +16233,7 @@ final class UnifiedResponse implements Countable
 </document_content>
 </document>
 
-<document index="82">
+<document index="81">
 <source>src/Router/FallbackStrategy.php</source>
 <document_content>
 <?php
@@ -16514,7 +16514,7 @@ final class FallbackStrategy
 </document_content>
 </document>
 
-<document index="83">
+<document index="82">
 <source>src/Router/KeyRotator.php</source>
 <document_content>
 <?php
@@ -16582,7 +16582,7 @@ final class KeyRotator
 </document_content>
 </document>
 
-<document index="84">
+<document index="83">
 <source>src/Support/ExceptionEnhancer.php</source>
 <document_content>
 <?php
@@ -16709,7 +16709,7 @@ class ExceptionEnhancer
 </document_content>
 </document>
 
-<document index="85">
+<document index="84">
 <source>src/Util/ConfigValidator.php</source>
 <document_content>
 <?php
@@ -16801,7 +16801,7 @@ class ConfigValidator
 </document_content>
 </document>
 
-<document index="86">
+<document index="85">
 <source>src/VectorStore/ChromaVectorStore.php</source>
 <document_content>
 <?php
@@ -17219,7 +17219,7 @@ final class ChromaVectorStore implements VectorStoreInterface
 </document_content>
 </document>
 
-<document index="87">
+<document index="86">
 <source>src/VectorStore/GeminiFileSearchVectorStore.php</source>
 <document_content>
 <?php
@@ -17697,7 +17697,7 @@ final class GeminiFileSearchVectorStore implements VectorStoreInterface
 </document_content>
 </document>
 
-<document index="88">
+<document index="87">
 <source>src/VectorStore/PineconeVectorStore.php</source>
 <document_content>
 <?php
@@ -17969,7 +17969,7 @@ final class PineconeVectorStore implements VectorStoreInterface
 </document_content>
 </document>
 
-<document index="89">
+<document index="88">
 <source>src/VectorStore/QdrantVectorStore.php</source>
 <document_content>
 <?php
@@ -18249,7 +18249,7 @@ final class QdrantVectorStore implements VectorStoreInterface
 </document_content>
 </document>
 
-<document index="90">
+<document index="89">
 <source>src/VectorStore/VectorNamespace.php</source>
 <document_content>
 <?php
@@ -18444,7 +18444,7 @@ final class VectorNamespace
 </document_content>
 </document>
 
-<document index="91">
+<document index="90">
 <source>src/VectorStore/VectorStoreInterface.php</source>
 <document_content>
 <?php
@@ -18519,7 +18519,7 @@ interface VectorStoreInterface
 </document_content>
 </document>
 
-<document index="92">
+<document index="91">
 <source>src/VectorStore/WeaviateVectorStore.php</source>
 <document_content>
 <?php
@@ -19137,7 +19137,7 @@ GQL,
 </document_content>
 </document>
 
-<document index="93">
+<document index="92">
 <source>tests/Assistant/AskYodaHostedAdapterTest.php</source>
 <document_content>
 <?php
@@ -19228,7 +19228,7 @@ final class AskYodaHostedAdapterTest extends TestCase
 </document_content>
 </document>
 
-<document index="94">
+<document index="93">
 <source>tests/Assistant/RagAnswerTest.php</source>
 <document_content>
 <?php
@@ -19319,7 +19319,7 @@ final class RagAnswerTest extends TestCase
 </document_content>
 </document>
 
-<document index="95">
+<document index="94">
 <source>tests/Assistant/RagAnswererTest.php</source>
 <document_content>
 <?php
@@ -19846,7 +19846,7 @@ final class RagAnswererTest extends TestCase
 </document_content>
 </document>
 
-<document index="96">
+<document index="95">
 <source>tests/Config/PriorityPoolTest.php</source>
 <document_content>
 <?php
@@ -20190,7 +20190,7 @@ final class PriorityPoolTest extends TestCase
 </document_content>
 </document>
 
-<document index="97">
+<document index="96">
 <source>tests/Config/ProviderSpecTest.php</source>
 <document_content>
 <?php
@@ -20290,7 +20290,7 @@ final class ProviderSpecTest extends TestCase
 </document_content>
 </document>
 
-<document index="98">
+<document index="97">
 <source>tests/Embedding/CohereEmbeddingConfigTest.php</source>
 <document_content>
 <?php
@@ -20394,7 +20394,7 @@ final class CohereEmbeddingConfigTest extends TestCase
 </document_content>
 </document>
 
-<document index="99">
+<document index="98">
 <source>tests/Embedding/CohereEmbeddingProviderTest.php</source>
 <document_content>
 <?php
@@ -20580,7 +20580,7 @@ final class CohereEmbeddingProviderTest extends TestCase
 </document_content>
 </document>
 
-<document index="100">
+<document index="99">
 <source>tests/Embedding/EmbeddingRequestTest.php</source>
 <document_content>
 <?php
@@ -20722,7 +20722,7 @@ final class EmbeddingRequestTest extends TestCase
 </document_content>
 </document>
 
-<document index="101">
+<document index="100">
 <source>tests/Embedding/GeminiEmbeddingConfigTest.php</source>
 <document_content>
 <?php
@@ -20819,7 +20819,7 @@ final class GeminiEmbeddingConfigTest extends TestCase
 </document_content>
 </document>
 
-<document index="102">
+<document index="101">
 <source>tests/Embedding/GeminiEmbeddingProviderTest.php</source>
 <document_content>
 <?php
@@ -21016,7 +21016,7 @@ final class GeminiEmbeddingProviderTest extends TestCase
 </document_content>
 </document>
 
-<document index="103">
+<document index="102">
 <source>tests/Embedding/OpenAiEmbeddingConfigTest.php</source>
 <document_content>
 <?php
@@ -21103,7 +21103,7 @@ final class OpenAiEmbeddingConfigTest extends TestCase
 </document_content>
 </document>
 
-<document index="104">
+<document index="103">
 <source>tests/Embedding/OpenAiEmbeddingProviderTest.php</source>
 <document_content>
 <?php
@@ -21344,7 +21344,7 @@ final class OpenAiEmbeddingProviderTest extends TestCase
 </document_content>
 </document>
 
-<document index="105">
+<document index="104">
 <source>tests/Embedding/VoyageEmbeddingConfigTest.php</source>
 <document_content>
 <?php
@@ -21475,7 +21475,7 @@ final class VoyageEmbeddingConfigTest extends TestCase
 </document_content>
 </document>
 
-<document index="106">
+<document index="105">
 <source>tests/Embedding/VoyageEmbeddingProviderTest.php</source>
 <document_content>
 <?php
@@ -21676,7 +21676,7 @@ final class VoyageEmbeddingProviderTest extends TestCase
 </document_content>
 </document>
 
-<document index="107">
+<document index="106">
 <source>tests/ExternalSearch/TwatSearchRetrieverTest.php</source>
 <document_content>
 <?php
@@ -21907,7 +21907,7 @@ final class TwatSearchRetrieverTest extends TestCase
 </document_content>
 </document>
 
-<document index="108">
+<document index="107">
 <source>tests/Llm/AskYodaClientTest.php</source>
 <document_content>
 <?php
@@ -22115,7 +22115,7 @@ final class AskYodaClientTest extends TestCase
 </document_content>
 </document>
 
-<document index="109">
+<document index="108">
 <source>tests/Llm/AskYodaResponseTest.php</source>
 <document_content>
 <?php
@@ -22222,7 +22222,7 @@ final class AskYodaResponseTest extends TestCase
 </document_content>
 </document>
 
-<document index="110">
+<document index="109">
 <source>tests/Llm/NeuronAiAdapterTest.php</source>
 <document_content>
 <?php
@@ -22387,7 +22387,7 @@ final class NeuronAiAdapterTest extends TestCase
 </document_content>
 </document>
 
-<document index="111">
+<document index="110">
 <source>tests/Llm/OpenAiChatClientTest.php</source>
 <document_content>
 <?php
@@ -22542,7 +22542,7 @@ final class OpenAiChatClientTest extends TestCase
 </document_content>
 </document>
 
-<document index="112">
+<document index="111">
 <source>tests/Llm/OpenAiChatConfigTest.php</source>
 <document_content>
 <?php
@@ -22672,7 +22672,7 @@ final class OpenAiChatConfigTest extends TestCase
 </document_content>
 </document>
 
-<document index="113">
+<document index="112">
 <source>tests/Llm/PromptBuilderTest.php</source>
 <document_content>
 <?php
@@ -22713,7 +22713,7 @@ final class PromptBuilderTest extends TestCase
 </document_content>
 </document>
 
-<document index="114">
+<document index="113">
 <source>tests/Logging/SpyLogger.php</source>
 <document_content>
 <?php
@@ -22749,7 +22749,7 @@ final class SpyLogger extends AbstractLogger
 </document_content>
 </document>
 
-<document index="115">
+<document index="114">
 <source>tests/Media/ChutesImageProviderTest.php</source>
 <document_content>
 <?php
@@ -22845,7 +22845,7 @@ final class ChutesImageProviderTest extends TestCase
 </document_content>
 </document>
 
-<document index="116">
+<document index="115">
 <source>tests/Media/FalImageProviderTest.php</source>
 <document_content>
 <?php
@@ -22951,7 +22951,7 @@ final class FalImageProviderTest extends TestCase
 </document_content>
 </document>
 
-<document index="117">
+<document index="116">
 <source>tests/Media/MediaRequestTest.php</source>
 <document_content>
 <?php
@@ -23101,7 +23101,7 @@ final class MediaRequestTest extends TestCase
 </document_content>
 </document>
 
-<document index="118">
+<document index="117">
 <source>tests/Media/MediaResultTest.php</source>
 <document_content>
 <?php
@@ -23241,7 +23241,7 @@ final class MediaResultTest extends TestCase
 </document_content>
 </document>
 
-<document index="119">
+<document index="118">
 <source>tests/Moderation/NullModeratorTest.php</source>
 <document_content>
 <?php
@@ -23278,7 +23278,7 @@ final class NullModeratorTest extends TestCase
 </document_content>
 </document>
 
-<document index="120">
+<document index="119">
 <source>tests/Moderation/OpenAiModeratorTest.php</source>
 <document_content>
 <?php
@@ -23542,7 +23542,7 @@ final class OpenAiModeratorTest extends TestCase
 </document_content>
 </document>
 
-<document index="121">
+<document index="120">
 <source>tests/ParaGraTest.php</source>
 <document_content>
 <?php
@@ -23796,6 +23796,175 @@ final class ParaGraTest extends TestCase
         self::assertSame('llama-3.3-70b', $result['metadata']['model']);
     }
 
+    public function test_answer_when_primary_provider_retrieval_fails_then_rotates(): void
+    {
+        $pool = PriorityPool::fromArray([
+            [
+                [
+                    'provider' => 'cerebras',
+                    'model' => 'llama-3.3-70b',
+                    'api_key' => 'free-1',
+                    'solution' => ['type' => 'ragie'],
+                ],
+            ],
+            [
+                [
+                    'provider' => 'openai',
+                    'model' => 'gpt-4o-mini',
+                    'api_key' => 'paid-1',
+                    'solution' => ['type' => 'ragie'],
+                ],
+            ],
+        ]);
+
+        $calls = [];
+
+        $fallbackContext = UnifiedResponse::fromChunks('openai', 'gpt-4o-mini', [
+            ['text' => 'Fallback context'],
+        ]);
+
+        $openaiLlm = $this->createMock(NeuronAiAdapter::class);
+        $openaiLlm->expects(self::once())
+            ->method('generate')
+            ->willReturnCallback(function (string $prompt, array $options) use (&$calls): string {
+                $calls[] = 'llm:openai';
+                self::assertStringContainsString('Need fallback rotation', $prompt);
+                self::assertSame([], $options);
+                return 'Fallback answer';
+            });
+
+        $paragra = $this->createParaGra(
+            $pool,
+            providerMap: [
+                'cerebras:llama-3.3-70b' => new StubProvider(
+                    provider: 'cerebras',
+                    model: 'llama-3.3-70b',
+                    response: null,
+                    exception: new RuntimeException('rate limited'),
+                    spy: function (string $query, array $options) use (&$calls): void {
+                        $calls[] = 'retrieve:cerebras';
+                        self::assertSame('Need fallback rotation', $query);
+                        self::assertSame([], $options);
+                    }
+                ),
+                'openai:gpt-4o-mini' => new StubProvider(
+                    provider: 'openai',
+                    model: 'gpt-4o-mini',
+                    response: $fallbackContext,
+                    spy: function (string $query, array $options) use (&$calls): void {
+                        $calls[] = 'retrieve:openai';
+                        self::assertSame('Need fallback rotation', $query);
+                        self::assertSame([], $options);
+                    }
+                ),
+            ],
+            llmMap: [
+                'openai:gpt-4o-mini' => $openaiLlm,
+            ]
+        );
+
+        $result = $paragra->answer('Need fallback rotation');
+
+        self::assertSame('Fallback answer', $result['answer']);
+        self::assertSame($fallbackContext, $result['context']);
+        self::assertSame('openai', $result['metadata']['provider']);
+        self::assertSame('gpt-4o-mini', $result['metadata']['model']);
+        self::assertSame(
+            ['retrieve:cerebras', 'retrieve:openai', 'llm:openai'],
+            $calls,
+        );
+    }
+
+    public function test_answer_when_llm_throws_then_next_pool_used(): void
+    {
+        $pool = PriorityPool::fromArray([
+            [
+                [
+                    'provider' => 'cerebras',
+                    'model' => 'llama-3.3-70b',
+                    'api_key' => 'free-1',
+                    'solution' => ['type' => 'ragie'],
+                ],
+            ],
+            [
+                [
+                    'provider' => 'openai',
+                    'model' => 'gpt-4o-mini',
+                    'api_key' => 'paid-1',
+                    'solution' => ['type' => 'ragie'],
+                ],
+            ],
+        ]);
+
+        $calls = [];
+
+        $primaryContext = UnifiedResponse::fromChunks('cerebras', 'llama-3.3-70b', [
+            ['text' => 'Tier one context'],
+        ]);
+        $fallbackContext = UnifiedResponse::fromChunks('openai', 'gpt-4o-mini', [
+            ['text' => 'Tier two context'],
+        ]);
+
+        $failingLlm = $this->createMock(NeuronAiAdapter::class);
+        $failingLlm->expects(self::once())
+            ->method('generate')
+            ->willReturnCallback(function (string $prompt, array $options) use (&$calls): string {
+                $calls[] = 'llm:cerebras';
+                throw new RuntimeException('llm failure simulated');
+            });
+
+        $openaiLlm = $this->createMock(NeuronAiAdapter::class);
+        $openaiLlm->expects(self::once())
+            ->method('generate')
+            ->willReturnCallback(function (string $prompt, array $options) use (&$calls): string {
+                $calls[] = 'llm:openai';
+                self::assertStringContainsString('LLM fallback question', $prompt);
+                self::assertSame([], $options);
+                return 'Recovered answer';
+            });
+
+        $paragra = $this->createParaGra(
+            $pool,
+            providerMap: [
+                'cerebras:llama-3.3-70b' => new StubProvider(
+                    provider: 'cerebras',
+                    model: 'llama-3.3-70b',
+                    response: $primaryContext,
+                    spy: function (string $query, array $options) use (&$calls): void {
+                        $calls[] = 'retrieve:cerebras';
+                        self::assertSame('LLM fallback question', $query);
+                        self::assertSame([], $options);
+                    }
+                ),
+                'openai:gpt-4o-mini' => new StubProvider(
+                    provider: 'openai',
+                    model: 'gpt-4o-mini',
+                    response: $fallbackContext,
+                    spy: function (string $query, array $options) use (&$calls): void {
+                        $calls[] = 'retrieve:openai';
+                        self::assertSame('LLM fallback question', $query);
+                        self::assertSame([], $options);
+                    }
+                ),
+            ],
+            llmMap: [
+                'cerebras:llama-3.3-70b' => $failingLlm,
+                'openai:gpt-4o-mini' => $openaiLlm,
+            ]
+        );
+
+        $result = $paragra->answer('LLM fallback question');
+
+        self::assertSame('Recovered answer', $result['answer']);
+        self::assertSame($fallbackContext, $result['context']);
+        self::assertSame('openai', $result['metadata']['provider']);
+        self::assertSame('gpt-4o-mini', $result['metadata']['model']);
+        self::assertSame(
+            ['retrieve:cerebras', 'llm:cerebras', 'retrieve:openai', 'llm:openai'],
+            $calls,
+        );
+    }
+
     public function test_retrieve_rejects_empty_questions(): void
     {
         $paragra = $this->createParaGra($this->createPriorityPool());
@@ -24018,7 +24187,7 @@ final class StubProvider implements ProviderInterface
 </document_content>
 </document>
 
-<document index="122">
+<document index="121">
 <source>tests/Pipeline/HybridRetrievalPipelineTest.php</source>
 <document_content>
 <?php
@@ -24306,7 +24475,7 @@ final class FakeVectorStore implements VectorStoreInterface
 </document_content>
 </document>
 
-<document index="123">
+<document index="122">
 <source>tests/Planner/PoolBuilderTest.php</source>
 <document_content>
 <?php
@@ -24825,7 +24994,7 @@ final class PoolBuilderTest extends TestCase
 </document_content>
 </document>
 
-<document index="124">
+<document index="123">
 <source>tests/ProviderCatalog/CapabilityMapTest.php</source>
 <document_content>
 <?php
@@ -24887,7 +25056,7 @@ final class CapabilityMapTest extends TestCase
 </document_content>
 </document>
 
-<document index="125">
+<document index="124">
 <source>tests/ProviderCatalog/ProviderDiscoveryTest.php</source>
 <document_content>
 <?php
@@ -25055,7 +25224,7 @@ final class ProviderDiscoveryTest extends TestCase
 </document_content>
 </document>
 
-<document index="126">
+<document index="125">
 <source>tests/ProviderCatalog/ProviderSummaryTest.php</source>
 <document_content>
 <?php
@@ -25170,7 +25339,7 @@ final class ProviderSummaryTest extends TestCase
 </document_content>
 </document>
 
-<document index="127">
+<document index="126">
 <source>tests/ProviderCatalog/SyncProviderCatalogTest.php</source>
 <document_content>
 <?php
@@ -25561,7 +25730,7 @@ PY;
 </document_content>
 </document>
 
-<document index="128">
+<document index="127">
 <source>tests/Providers/AbstractProviderTest.php</source>
 <document_content>
 <?php
@@ -25736,7 +25905,7 @@ final class DummyProvider extends AbstractProvider
 </document_content>
 </document>
 
-<document index="129">
+<document index="128">
 <source>tests/Providers/AskYodaProviderTest.php</source>
 <document_content>
 <?php
@@ -25843,7 +26012,7 @@ final class AskYodaProviderTest extends TestCase
 </document_content>
 </document>
 
-<document index="130">
+<document index="129">
 <source>tests/Providers/GeminiFileSearchProviderTest.php</source>
 <document_content>
 <?php
@@ -26001,7 +26170,7 @@ final class GeminiFileSearchProviderTest extends TestCase
 </document_content>
 </document>
 
-<document index="131">
+<document index="130">
 <source>tests/Providers/ProviderFactoryTest.php</source>
 <document_content>
 <?php
@@ -26116,7 +26285,7 @@ final class ProviderFactoryTest extends TestCase
 </document_content>
 </document>
 
-<document index="132">
+<document index="131">
 <source>tests/Providers/RagieProviderTest.php</source>
 <document_content>
 <?php
@@ -26235,7 +26404,7 @@ final class RagieProviderTest extends TestCase
 </document_content>
 </document>
 
-<document index="133">
+<document index="132">
 <source>tests/ReferenceCatalog/ProviderCatalogBuilderTest.php</source>
 <document_content>
 <?php
@@ -26468,7 +26637,7 @@ final class ProviderCatalogBuilderTest extends TestCase
 </document_content>
 </document>
 
-<document index="134">
+<document index="133">
 <source>tests/Response/UnifiedResponseTest.php</source>
 <document_content>
 <?php
@@ -26612,7 +26781,7 @@ final class UnifiedResponseTest extends TestCase
 </document_content>
 </document>
 
-<document index="135">
+<document index="134">
 <source>tests/Router/FallbackStrategyTest.php</source>
 <document_content>
 <?php
@@ -26967,7 +27136,7 @@ final class FallbackStrategyTest extends TestCase
 </document_content>
 </document>
 
-<document index="136">
+<document index="135">
 <source>tests/Router/KeyRotatorTest.php</source>
 <document_content>
 <?php
@@ -27129,7 +27298,7 @@ final class KeyRotatorTest extends TestCase
 </document_content>
 </document>
 
-<document index="137">
+<document index="136">
 <source>tests/Support/ExceptionEnhancerTest.php</source>
 <document_content>
 <?php
@@ -27265,7 +27434,7 @@ final class ExceptionEnhancerTest extends TestCase
 </document_content>
 </document>
 
-<document index="138">
+<document index="137">
 <source>tests/Util/ConfigValidatorTest.php</source>
 <document_content>
 <?php
@@ -27402,7 +27571,7 @@ final class ConfigValidatorTest extends TestCase
 </document_content>
 </document>
 
-<document index="139">
+<document index="138">
 <source>tests/VectorStore/ChromaVectorStoreTest.php</source>
 <document_content>
 <?php
@@ -27731,7 +27900,7 @@ final class ChromaVectorStoreTest extends TestCase
 </document_content>
 </document>
 
-<document index="140">
+<document index="139">
 <source>tests/VectorStore/GeminiFileSearchVectorStoreTest.php</source>
 <document_content>
 <?php
@@ -28081,7 +28250,7 @@ final class GeminiFileSearchVectorStoreTest extends TestCase
 </document_content>
 </document>
 
-<document index="141">
+<document index="140">
 <source>tests/VectorStore/PineconeVectorStoreTest.php</source>
 <document_content>
 <?php
@@ -28292,7 +28461,7 @@ final class PineconeVectorStoreTest extends TestCase
 </document_content>
 </document>
 
-<document index="142">
+<document index="141">
 <source>tests/VectorStore/QdrantVectorStoreTest.php</source>
 <document_content>
 <?php
@@ -28513,7 +28682,7 @@ final class QdrantVectorStoreTest extends TestCase
 </document_content>
 </document>
 
-<document index="143">
+<document index="142">
 <source>tests/VectorStore/VectorNamespaceTest.php</source>
 <document_content>
 <?php
@@ -28605,7 +28774,7 @@ final class VectorNamespaceTest extends TestCase
 </document_content>
 </document>
 
-<document index="144">
+<document index="143">
 <source>tests/VectorStore/WeaviateVectorStoreTest.php</source>
 <document_content>
 <?php
@@ -29008,7 +29177,7 @@ final class WeaviateVectorStoreTest extends TestCase
 </document_content>
 </document>
 
-<document index="145">
+<document index="144">
 <source>tests/bootstrap.php</source>
 <document_content>
 <?php
@@ -29030,7 +29199,7 @@ if (class_exists(DG\BypassFinals::class)) {
 </document_content>
 </document>
 
-<document index="146">
+<document index="145">
 <source>tools/pool_builder.php</source>
 <document_content>
 #!/usr/bin/env php
@@ -29092,7 +29261,7 @@ fwrite(STDOUT, $contents);
 </document_content>
 </document>
 
-<document index="147">
+<document index="146">
 <source>tools/provider_catalog.php</source>
 <document_content>
 #!/usr/bin/env php
@@ -29180,7 +29349,7 @@ switch ($command) {
 </document_content>
 </document>
 
-<document index="148">
+<document index="147">
 <source>tools/sync_provider_catalog.php</source>
 <document_content>
 #!/usr/bin/env php
