@@ -18,7 +18,7 @@
     "source": "https://github.com/twardoch/rag-projects"
   },
   "require": {
-    "php": "^8.2",
+    "php": "^8.3",
     "ext-json": "*",
     "ext-mbstring": "*",
     "google-gemini-php/client": "^2.7",
@@ -59,7 +59,10 @@
     ]
   },
   "config": {
-    "sort-packages": true
+    "sort-packages": true,
+    "platform": {
+      "php": "8.3.99"
+    }
   },
   "minimum-stability": "dev",
   "prefer-stable": true,

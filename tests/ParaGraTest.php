@@ -470,7 +470,6 @@ final class ParaGraTest extends TestCase
 
         $ref = new ReflectionClass($paragra);
         $method = $ref->getMethod('resolveProvider');
-        $method->setAccessible(true);
         $spec = ProviderSpec::fromArray([
             'provider' => 'cerebras',
             'model' => 'llama-3.3-70b',
@@ -494,7 +493,6 @@ final class ParaGraTest extends TestCase
 
         $ref = new ReflectionClass($paragra);
         $method = $ref->getMethod('resolveLlm');
-        $method->setAccessible(true);
         $spec = ProviderSpec::fromArray([
             'provider' => 'cerebras',
             'model' => 'llama-3.3-70b',

@@ -134,7 +134,6 @@ final class NeuronAiAdapterTest extends TestCase
     {
         $reflection = new ReflectionClass($adapter);
         $method = $reflection->getMethod('resolveProvider');
-        $method->setAccessible(true);
 
         /** @var AIProviderInterface $provider */
         $provider = $method->invoke($adapter, $options);
@@ -149,7 +148,6 @@ final class NeuronAiAdapterTest extends TestCase
     {
         $reflection = new ReflectionClass($object);
         $prop = $reflection->getProperty($property);
-        $prop->setAccessible(true);
 
         /** @var array<string, mixed> $value */
         $value = $prop->getValue($object);

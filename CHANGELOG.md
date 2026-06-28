@@ -4,6 +4,21 @@ this_file: paragra-php/CHANGELOG.md
 
 # ParaGra Changelog
 
+## 2026-06-28 - PHP 8.3 floor, PHPUnit fix, CI workflow, docs expansion
+
+- **composer.json**: Raised PHP floor from `^8.2` to `^8.3`; added `platform.php = 8.3.99` override so Psalm 6 installs cleanly on local PHP 8.5 machines. Updated `phpunit.xml.dist` schema URL to `11.4` (PHPUnit 11.5.55 ships no `11.5` schema locally) and ran `composer update phpunit/phpunit phpunit/php-code-coverage --with-all-dependencies` to repair corrupted vendor state that was missing the `CodeCoverage/` subdirectory.
+- **CI**: Added `.github/workflows/ci.yml` with three independent jobs — `test` (PHP 8.3 + 8.4 matrix), `phpstan`, and `lint` — all using `--ignore-platform-reqs` to work around the Psalm PHP version constraint on hosted runners.
+- **publish.sh**: Added Packagist webhook notification step; reads `PACKAGIST_TOKEN` + `PACKAGIST_USER` from the environment and POSTs to `https://packagist.org/api/update-package`; falls back gracefully when credentials are absent (the GitHub Service hook covers the common case automatically).
+- **PHPDoc on `ParaGra`**: Added full docblocks to the class, constructor, `fromConfig()` (including all provider-spec array keys), `withModeration()`, `retrieve()`, and `answer()` with `@param`/`@return`/`@throws` and inline execution-order notes.
+- **Inline comments on `FallbackStrategy`**: Documented the fallback algorithm, provider-pool `solution` metadata keys, and family-policy default table directly in the source.
+- **Tests**: Fixed `ReflectionMethod::setAccessible(true)` calls in `ParaGraTest`, `GeminiFileSearchVectorStoreTest`, and `WeaviateVectorStoreTest` (no-op since PHP 8.1, deprecated since PHP 8.5). Full suite: **325 tests / 1,230 assertions, 0 failures, 0 errors**.
+- **Docs (`src-docs/`)**: Added five new pages wired into `zensical.toml` nav:
+  - `architecture/provider-matrix.md` — table of all retrieval, vector store, embedding, and moderation adapters.
+  - `architecture/fallback-algorithm.md` — step-by-step algorithm, sequence diagram, family-policy table, logging format.
+  - `reference/answer-method.md` — full `answer()` parameter reference with return-shape docs and error-handling examples.
+  - `guides/migration.md` — migration guide from `ragie-php`, `openai-php`, `google-gemini-php`, and raw vector store SDKs.
+  - `STYLE_GUIDE.md` — coding, naming, PHPDoc, test, docs, and git conventions.
+
 ## 2026-01-12 - Coverage lift for Assistant/Config/ProviderCatalog
 
 - Working from `/Users/adam/Developer/vcs/github.twardoch/pub/rag-projects/paragra-php` (Assistant + Config + ProviderCatalog tests) to complete PLAN/TODO Workstream 2 goal “Achieve ≥90% ParaGra coverage”. Added `tests/Assistant/RagAnswerTest.php` to exercise metadata/fallback helpers plus context + chat-usage passthroughs so RagAnswer’s accessors are fully covered.

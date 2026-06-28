@@ -129,6 +129,16 @@ paragra-php/
 
 `ragie-php` handles the Ragie API directly. `paragra-php` adds multi-provider orchestration on top.
 
+## Documentation
+
+Full API reference, provider matrix, fallback algorithm, migration guide, and style guide:
+
+- [Provider Matrix](src-docs/architecture/provider-matrix.md) — all adapters at a glance
+- [Fallback Algorithm](src-docs/architecture/fallback-algorithm.md) — how rotation and tiers work
+- [`answer()` Reference](src-docs/reference/answer-method.md) — full parameter and return-type docs
+- [Migration Guide](src-docs/guides/migration.md) — move from ragie-php, openai-php, or raw SDK calls
+- [Style Guide](src-docs/STYLE_GUIDE.md) — coding, naming, and documentation conventions
+
 ## Testing
 
 ```bash
@@ -143,7 +153,7 @@ Target coverage: ≥90%.
 
 ## Requirements
 
-- PHP 8.1+
+- PHP 8.3+
 - Composer
 - At least one configured provider (Ragie, OpenAI, Gemini, etc.)
 

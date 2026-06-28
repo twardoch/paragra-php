@@ -15,13 +15,16 @@ nav = [
   { "Architecture" = [
       { "Overview" = "architecture/overview.md" },
       { "Provider Pools" = "architecture/pools.md" },
-      { "Vector Stores" = "architecture/vector-stores.md" }
+      { "Vector Stores" = "architecture/vector-stores.md" },
+      { "Provider Matrix" = "architecture/provider-matrix.md" },
+      { "Fallback Algorithm" = "architecture/fallback-algorithm.md" }
   ]},
   { "Guides" = [
       { "Provider Catalog" = "guides/provider-catalog.md" },
       { "Embedding Providers" = "guides/embeddings.md" },
       { "Vector Store Adapters" = "guides/vector-stores.md" },
-      { "Hybrid Retrieval" = "guides/hybrid-retrieval.md" }
+      { "Hybrid Retrieval" = "guides/hybrid-retrieval.md" },
+      { "Migration Guide" = "guides/migration.md" }
   ]},
   { "How-To" = [
       { "Pool Builder" = "how-to/pool-builder.md" },
@@ -30,7 +33,9 @@ nav = [
   ]},
   { "Reference" = [
       { "CLI Tools" = "reference/cli.md" },
-      { "Documentation Workflow" = "reference/docs.md" }
+      { "Documentation Workflow" = "reference/docs.md" },
+      { "answer() Reference" = "reference/answer-method.md" },
+      { "Style Guide" = "STYLE_GUIDE.md" }
   ]}
 ]
 

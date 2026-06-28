@@ -369,7 +369,6 @@ final class WeaviateVectorStoreTest extends TestCase
         $store = new WeaviateVectorStore('https://example.weaviate.network', 'Articles');
         $ref = new ReflectionClass($store);
         $method = $ref->getMethod('sanitizeProperties');
-        $method->setAccessible(true);
 
         /** @var array<int, string> $sanitized */
         $sanitized = $method->invoke($store, [' title ', '', 'text', 'title', 42]);

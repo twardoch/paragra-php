@@ -26,14 +26,51 @@ use function trim;
 
 /**
  * Executes an operation across priority pools until one succeeds.
+ *
+ * Fallback algorithm
+ * ------------------
+ * 1. Iterate over priority tiers (index 0 = highest priority).
+ * 2. For each tier, detect the *family* of the first spec (free / hybrid / hosted / default)
+ *    by inspecting ``solution.metadata.plan``, ``.tier``, or ``.latency_tier``.
+ * 3. Resolve ``max_attempts`` from the family policy (null = try every spec in the pool).
+ * 4. Ask {@see KeyRotator} to pick the starting spec (timestamp-based round-robin).
+ * 5. Try the operation with the selected spec. On failure:
+ *    a. Log the error with a fingerprint of the key (first 8 hex chars of SHA1).
+ *    b. Advance to the next spec in the pool (modulo pool size).
+ *    c. Repeat until ``max_attempts`` is reached.
+ * 6. If the tier is exhausted, log it and move to the next tier.
+ * 7. If all tiers are exhausted, throw {@see RuntimeException} wrapping the last exception.
+ *
+ * Provider-pool configuration keys (inside each spec's ``solution`` array)
+ * -------------------------------------------------------------------------
+ * - ``type``              (string, required) – Adapter type, e.g. "ragie", "openai", "gemini".
+ * - ``metadata``          (array, optional)  – Free-form map read by the family detector:
+ *     - ``plan``          (string) – "free", "hybrid", "hosted" or alias (see normalizeFamilyToken).
+ *     - ``tier``          (string) – Alias for ``plan``.
+ *     - ``latency_tier``  (string) – Alias for ``plan``.
+ * - Any additional keys are forwarded verbatim to the concrete adapter.
+ *
+ * Family policy defaults (max_attempts per tier)
+ * -----------------------------------------------
+ * | Family  | max_attempts | Meaning                                 |
+ * |---------|--------------|------------------------------------------|
+ * | free    | null         | Try every spec in the pool (all keys)   |
+ * | hybrid  | 2            | Try at most 2 specs before giving up    |
+ * | hosted  | 1            | Try exactly 1 spec (managed SLA)        |
+ * | default | null         | Same as free (catch-all)                |
  */
 final class FallbackStrategy
 {
+    /**
+     * Default per-family attempt caps.
+     *
+     * null = "try every spec in the pool"; an integer caps the number of rotation steps.
+     */
     private const DEFAULT_FAMILY_POLICIES = [
-        'free' => ['max_attempts' => null],
-        'hybrid' => ['max_attempts' => 2],
-        'hosted' => ['max_attempts' => 1],
-        'default' => ['max_attempts' => null],
+        'free'    => ['max_attempts' => null], // exhaust all free keys before failing
+        'hybrid'  => ['max_attempts' => 2],    // balance cost vs. resilience
+        'hosted'  => ['max_attempts' => 1],    // trust the SLA; fail fast to the next tier
+        'default' => ['max_attempts' => null], // catch-all: behave like 'free'
     ];
 
     /**

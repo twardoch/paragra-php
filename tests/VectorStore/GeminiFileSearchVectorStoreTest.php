@@ -283,7 +283,6 @@ final class GeminiFileSearchVectorStoreTest extends TestCase
         $store = new GeminiFileSearchVectorStore('key', 'fileSearchStores/default');
         $reflection = new ReflectionClass($store);
         $method = $reflection->getMethod('sanitizeDocumentId');
-        $method->setAccessible(true);
 
         $generated = $method->invoke($store, '');
         self::assertNotSame('', $generated);
